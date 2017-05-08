@@ -1,0 +1,6 @@
+framework module TPFDebugTool {
+  umbrella header "TPFDebugTool-umbrella.h"
+
+  export *
+  module * { export * }
+}

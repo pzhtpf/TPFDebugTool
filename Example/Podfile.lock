@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - TPFDebugTool (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - TPFDebugTool (from `../`)
+
+EXTERNAL SOURCES:
+  TPFDebugTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
+  TPFDebugTool: 2107a0d6373599e4e5fc4f6fdc506d062ed1b4b0
+
+PODFILE CHECKSUM: 468584cf2b56ca0eebf8768d1a38b10b6f467ab1
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,6 @@
+framework module Pods_TPFDebugTool_Example {
+  umbrella header "Pods-TPFDebugTool_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
