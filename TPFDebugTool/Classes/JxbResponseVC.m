@@ -81,7 +81,6 @@
        
         NSMutableAttributedString *mutableAttributedString;
          self.JSONDisplayUtils = [YDHtmlDisplayUtils new];
-        self.JSONDisplayUtils.maxWidth = kScreenWidth;
         if(!error){
            
             if(dataDictionary){

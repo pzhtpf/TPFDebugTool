@@ -62,7 +62,7 @@
     else{
     
 //        lblTitle.textColor = [JxbDebugTool shareInstance].mainColor;
-         lblTitle.textColor = kColorWithRGB(0x87d850);
+          lblTitle.textColor = TPFColorWithRGB(0x87d850);
 
     }
 }

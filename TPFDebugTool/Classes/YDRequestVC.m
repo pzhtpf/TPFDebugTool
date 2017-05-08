@@ -138,7 +138,7 @@
     if(indexPath.row%2==0)
         cell.contentView.backgroundColor = [UIColor whiteColor];
     else
-        cell.contentView.backgroundColor = kColorWithRGB(0xf5f5f5);
+        cell.contentView.backgroundColor = TPFColorWithRGB(0xf5f5f5);
     
     return cell;
 }

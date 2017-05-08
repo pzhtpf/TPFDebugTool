@@ -7,85 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E8D843F43F4F45AF052E3D42291AA4 /* JxbMemoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E067D5C1A33A00980E1A2883EC0D35 /* JxbMemoryHelper.m */; };
-		03E767560D36D8E6F34486FBD662AD39 /* JxbLogVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F9AD1965F042A914E38B5AFDFC6F6 /* JxbLogVC.m */; };
 		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07748EC10524F258241BA0B37E560414 /* JxbDebugVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FC2BC0EDF5D5673D7AB75FE66959F74 /* JxbDebugVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07748EC10524F258241BA0B37E560414 /* JxbDebugVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A1BA1F41D1BA8ACBBDB98724F06D97 /* JxbDebugVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */; };
-		12D985172B45241D5AC5883B6BC6F51D /* JxbHttpDetailVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE8B25967EF5560DB41CBE7BA8EB8BD /* JxbHttpDetailVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12D985172B45241D5AC5883B6BC6F51D /* JxbHttpDetailVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EC6773D4A0D9A2D9C9D3511B870E138 /* JxbHttpDetailVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		157782C5276E71D8D2581965B3DA6C55 /* TPFDebugTool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DC67E7134D0E236B2E63DE8BC3784B8 /* TPFDebugTool.bundle */; };
-		1A697176051D6B887F514AA3046AFC69 /* NSURLSessionTask+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC8C50333292F80F10800A8ABAC98 /* NSURLSessionTask+Data.m */; };
 		1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */; };
-		1C6A76673C23A43589BD08FE7543A6F9 /* JxbResponseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 0326C43A74F62D0D2402702D3AEDEB9B /* JxbResponseVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D6A2242D6EC22686B6C65B0FA2F3DD4 /* JxbContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948EFE50045A4F6C9D06D6A38C6C5B5D /* JxbContentVC.m */; };
-		1DB87FAA79BD8940956600956C65BE03 /* NSURLRequest+Identify.h in Headers */ = {isa = PBXBuildFile; fileRef = 844D2413A5A817ADE4D6C6F35BF74D47 /* NSURLRequest+Identify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21954A7DB1967B3403D38D5193967AC8 /* NSURLSessionTask+Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 225845AC7659CDA9917F9C8E2EA5A46D /* NSURLSessionTask+Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21D2C6DCC4A9E95B99662BD8062FE679 /* YDRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A10B2BA66DD49B8C680C9AA550CE3D52 /* YDRequestVC.m */; };
-		2370BE8E3EE23CC6409EF75B29E3F2A9 /* NSURLResponse+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BF21995F140154F2CADD525FDBAD27 /* NSURLResponse+Data.m */; };
+		1C6A76673C23A43589BD08FE7543A6F9 /* JxbResponseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D167DD463343FCEF496789B9B2443B2 /* JxbResponseVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CC8FA0CC2BC1032AA05E61F7AE999F2 /* YDRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968743EF54A878D45E930A98886473A2 /* YDRequestCell.m */; };
+		1DB87FAA79BD8940956600956C65BE03 /* NSURLRequest+Identify.h in Headers */ = {isa = PBXBuildFile; fileRef = 00573AA9E49843326A48DD92E25508FC /* NSURLRequest+Identify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21954A7DB1967B3403D38D5193967AC8 /* NSURLSessionTask+Data.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB46E4FF58B67D216E627B62F551529 /* NSURLSessionTask+Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27B3B082CA0A997C9753EEB3B03794F4 /* Pods-TPFDebugTool_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD67B87844015365FC2B8C757D97AE9 /* Pods-TPFDebugTool_Tests-dummy.m */; };
-		29D078D438A95E24B77B13F74FEFA942 /* JxbHttpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F83C34919C2B376E9FF98196EB1AF1D /* JxbHttpCell.m */; };
 		2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3236DED7B75866442DC49F562B852156 /* YDHtmlDisplayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F0C24E6C56A789E5B07DDE52A66929CA /* YDHtmlDisplayUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31F9C08BEB08855A5DF3C10A97FC80AB /* YDRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DCE64AE80C78250C59777125BE191F /* YDRequestVC.m */; };
+		3236DED7B75866442DC49F562B852156 /* YDHtmlDisplayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD434AC692D17C61D694261727204BA /* YDHtmlDisplayUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33BF42521B1BD830434D62FA3A286D94 /* NSURLResponse+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D76B87515C9931C8883230064E07DE /* NSURLResponse+Data.m */; };
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */; };
-		3C2A6306DA7316555B4258E42FD5378C /* JxbHttpDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 8844ECFE6F40218FACB0CAA6D8399B6A /* JxbHttpDatasource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4124408FD404A4A970ECF1FFAB7E9105 /* JxbHttpDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = A827501970D62FF32EF280FE6C55F556 /* JxbHttpDatasource.m */; };
+		388F2DEB49D29351C67CDA6BD79C7B60 /* JxbHttpProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4058D3AF02385455CB42866948519B94 /* JxbHttpProtocol.m */; };
+		3C2A6306DA7316555B4258E42FD5378C /* JxbHttpDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6BCFC95FF69F3D267CDD2273CFF667 /* JxbHttpDatasource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D55EFDAB193EE645574B26836437FD1 /* JxbMemoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A9D3590583111D2198E2F589DA669 /* JxbMemoryHelper.m */; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		47B93BBCA3329193CB1854C4D13FF6D7 /* JxbHttpProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1CB141E5746F0F2F2FFE3BFB636CB1 /* JxbHttpProtocol.m */; };
-		4CF1314F22DF9AF383E4F5A0149D8A17 /* YDJSONDisplayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 917E6C31E44C6C8C7BAC66DA95334CB7 /* YDJSONDisplayUtils.m */; };
-		4D2904457879DEF79253392FE8F76D02 /* YDRequestVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C28DF12C0143793EF3C014698D0E996 /* YDRequestVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EECAAC12FC14E16FCEDD38F094612EF /* JxbHttpCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F87857796F1DBD8CC73242ABA1DB2234 /* JxbHttpCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A6886EDDC53DF2AD5AC4EE26D790F01 /* JxbContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 311F316DA8E9C5E368A9A1990A678268 /* JxbContentVC.m */; };
+		4D2904457879DEF79253392FE8F76D02 /* YDRequestVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 5725A2B9FC6B90ED133E68C0350EEFC8 /* YDRequestVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EECAAC12FC14E16FCEDD38F094612EF /* JxbHttpCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B712B2B6C2751DBE265CE568694ECC0 /* JxbHttpCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */; };
-		542975810D8154691BDD28392B6DF4C7 /* JxbBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B119867BBDC6999C942D9875D89EB4 /* JxbBaseVC.m */; };
-		582B93F16D0DED4585B94EA368C51A3C /* NSURLSessionTask+Swizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 49BB127B468719517EE6B64A6B0F917E /* NSURLSessionTask+Swizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B5C62BCD538C246D5590337951D0596 /* YDRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A806D9CC0356FD4C715FCD13A55A6CC6 /* YDRequestCell.m */; };
+		582B93F16D0DED4585B94EA368C51A3C /* NSURLSessionTask+Swizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF1B449C0F2CF0DB271B60DB033C91F /* NSURLSessionTask+Swizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58F464174720076A2D799A4EDA0C8741 /* YDJSONDisplayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3794E5A22937B7D610EF43B6CC97812 /* YDJSONDisplayUtils.m */; };
 		5BD692F260B83CD9259D4FE49F9361A4 /* Pods-TPFDebugTool_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A25E229C56C153A0761C7C257CD2B49D /* Pods-TPFDebugTool_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F1DD92B006E6B7133FDBB8086592F89 /* NSURLSessionTask+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E9823D6CAF40F8E94DF7BDDBB8B078 /* NSURLSessionTask+Swizzling.m */; };
-		5FB89556F901091D6F09AE3797BCD177 /* JxbDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BEA9D763905CD0B2FC0822B3B9B1158 /* JxbDebugTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		615A6B7030FBD86856E628C496DE913E /* TPFDebugTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F912FE9D9BD6D9369FFCA6A629EF49 /* TPFDebugTool-dummy.m */; };
-		620D33C79386B13BFEDB41D03A4E86EA /* JxbBaseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B384D0B4A964A541098EAF0CBDD257 /* JxbBaseVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63C5B83F83F704DD93C9ABD1DFE41F34 /* YDJSONDisplayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8834E9BEA2316D3F410EF7D32C65E9D4 /* YDJSONDisplayUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		679426625F23FDCFADC2602E3BDAC41D /* NSURLRequest+Identify.m in Sources */ = {isa = PBXBuildFile; fileRef = 323700E39E959F0DDCD6030FBCF8BFA1 /* NSURLRequest+Identify.m */; };
+		5FB89556F901091D6F09AE3797BCD177 /* JxbDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0C35C01D2F839853A257B814E3527F /* JxbDebugTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		620D33C79386B13BFEDB41D03A4E86EA /* JxbBaseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B19A9ECCD986A7CD439AF46B8B3C445 /* JxbBaseVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63C5B83F83F704DD93C9ABD1DFE41F34 /* YDJSONDisplayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = BAA1B294FB3B37B11F27C7F6F02F22E7 /* YDJSONDisplayUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68A4EBC7CBF809641BD0EFA0045FC997 /* JxbBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E49AD41C17E554CBA6C11A10BB484B /* JxbBaseVC.m */; };
 		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
-		6E1A404639E3CA754326067F101E7065 /* JxbResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D85A37E7659790EE484F93AE41602 /* JxbResponseVC.m */; };
-		6EF5D997A6BB2D56111DCE474DE87185 /* JxbHttpVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4800A544F1B95C8F800B75BD233CEF3D /* JxbHttpVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5F0B4388E190D03625A6D3EE773681 /* JxbResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45450F89CF62CC20216AD97640943E37 /* JxbResponseVC.m */; };
+		6EF5D997A6BB2D56111DCE474DE87185 /* JxbHttpVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 36ED4CC3B3D2C568AE0B504DD34CC03B /* JxbHttpVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FD0FA9675284C3C0EE48E881B304C17 /* JxbHttpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A1E95404D26482A6708BE10300907 /* JxbHttpCell.m */; };
 		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */; };
+		777B50CF3CD882B61834C1699BE08240 /* JxbDebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 972BAD02138E6DE4A890C367C4DBD1BE /* JxbDebugVC.m */; };
 		7D5B559A58D8DEE50FE87B67E5CED2AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
 		7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */; };
-		826497908557CA63235253E0E77DC661 /* YDRequestCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 287AEDEFB23AE08FF3E98A55A9F2862F /* YDRequestCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81A44A10FBA7369BED6BD6F608C89CC4 /* TPFDebugTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F912FE9D9BD6D9369FFCA6A629EF49 /* TPFDebugTool-dummy.m */; };
+		826497908557CA63235253E0E77DC661 /* YDRequestCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A1EA9CF7A91B9FEDAF6A6372BD6979 /* YDRequestCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82BE6E43137942E099562321C3C25600 /* JxbHttpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1FF70D178E9EB97C4FB807862BFB72 /* JxbHttpVC.m */; };
 		841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */; };
-		863B88059291FE14E913C6F117B8568F /* JxbContentVC.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFEA9C28CE596454AB3B1BB2EFCECA9 /* JxbContentVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		863B88059291FE14E913C6F117B8568F /* JxbContentVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 954C40D42370717707C6913DF1B0F7E4 /* JxbContentVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8773325775530FF506311B9A8A673280 /* JxbCrashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B3D11483608A61A3643EE4E056C3B4 /* JxbCrashHelper.m */; };
+		87F5E4F00462AB077CA72D62A2C07F94 /* JxbLogVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D12782A22B86608920B2031751FAA65 /* JxbLogVC.m */; };
+		88BA33314262CA99D3DA19318E4A1F80 /* NSURLRequest+Identify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D9AA01451B42B974636F9FF1BF9BF9 /* NSURLRequest+Identify.m */; };
+		89D52E1A94335786C08D802B165DFE01 /* JxbDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F149C1530A4F994AA863C23CBD44BC3A /* JxbDebugTool.m */; };
 		91D0138ACFAD733E4061F12E450C336C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
-		9350E88A5CC92BC0D35ADD832B7CCAE7 /* JxbHttpDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09398CC45D0ACD999518A50BB7F4CC4F /* JxbHttpDetailVC.m */; };
-		9556FDE2C407BEB874882596072642DB /* YDHtmlDisplayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D979C0E6DDB542C9264347D63AB8AC /* YDHtmlDisplayUtils.m */; };
+		95B9F15AF421EB45DAAD3BFD9E9A2A9C /* TPFDebugTool.pch in Sources */ = {isa = PBXBuildFile; fileRef = FC2B3ADD6E3397CE94F0590C2D222405 /* TPFDebugTool.pch */; };
 		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		998CDDFB2C3A7A6CAF9331F37FEAD2DC /* JxbCrashVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F79A191EB80F3383F782359ABF2C6F1 /* JxbCrashVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99E855E6994E148C51DA66F7B1967079 /* YDNameValueModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E395346421DF9CC00DA95190E4256DD /* YDNameValueModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F8E44A81DD961036E4DA8BA41E15721 /* JxbCrashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 645788CA8469235876252F96C3C41F12 /* JxbCrashHelper.m */; };
+		998CDDFB2C3A7A6CAF9331F37FEAD2DC /* JxbCrashVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3835D4677B2160120F4058FCA41EF1C3 /* JxbCrashVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99E855E6994E148C51DA66F7B1967079 /* YDNameValueModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 77CE60A13F0AEFAD25977208DA7632DC /* YDNameValueModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1EB2096FA5E3CF28AD937B5221C6602 /* YDRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D20F32D1A240D8C64916E099E8E29BC5 /* YDRequestCell.xib */; };
 		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */; };
+		A75704393A619BAACDAD71D289187AFA /* NSURLSessionTask+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E71F56336887C21474DC2D548129E8 /* NSURLSessionTask+Swizzling.m */; };
 		A83EE6DA3C0FABB5FA762B921818CA1E /* Pods-TPFDebugTool_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBEBFF4DB15D1EB423E8C5723D4ACD /* Pods-TPFDebugTool_Example-dummy.m */; };
-		B0E25F96D61D96EA54E676EFF4AECFA5 /* JxbLogVC.h in Headers */ = {isa = PBXBuildFile; fileRef = C96E0C910026694102CE1CDCB98D69A6 /* JxbLogVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2652C4F588484D7F5224F2D7796FBB3 /* JxbMemoryHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4014231D81B79CBB88E5DA2D224F86A7 /* JxbMemoryHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0E25F96D61D96EA54E676EFF4AECFA5 /* JxbLogVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 000DFCF690F0792BF8C9E1D7C073E63A /* JxbLogVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2652C4F588484D7F5224F2D7796FBB3 /* JxbMemoryHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C3B00913616CDBBDBBE9834FEE84D9F /* JxbMemoryHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27810809BAD71E4022600B21251449F /* QuartzCore.framework */; };
+		B58932FADD2452C82C35345D3342693D /* NSURLSessionTask+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = F637FDA3DEEC29197617D94316129CEA /* NSURLSessionTask+Data.m */; };
 		B5CD4AEFE0D4BB965D0A7B9B503B5A31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
 		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB778AC8434F42FB94DE0270A3BFC9EE /* JxbDebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217560E661BA2F18B7F3B56822847F7 /* JxbDebugVC.m */; };
 		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */; };
 		BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C76D5A10D310A00755D56D63810D8357 /* YDRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9530B045A22BA1953D1FBF9755519B4 /* YDRequestVC.xib */; };
+		C823FDA14DBF7FD359DBDAAD580181D7 /* JxbHttpDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 763CCEB33904E8ACE059B1E52ECF0497 /* JxbHttpDetailVC.m */; };
+		C9D99605311767442E2952C1FAC03626 /* JxbCrashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA940832030E8C5C2A5055CD01B548D /* JxbCrashVC.m */; };
 		CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CB243F4CFE1AF93F2510DF9FFEC02249 /* JxbCrashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6355C7B8B5D0392671D65DACF4F90 /* JxbCrashVC.m */; };
-		CF919E75EB7B165C2CCD8BAB80EB3F5E /* JxbHttpProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 453B092D0828808722A33B66A849CC53 /* JxbHttpProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFE6F293955FE1368ADB7ECAABC34E66 /* JxbCrashHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = BECD22230D10647197ED274E81E47AB7 /* JxbCrashHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF919E75EB7B165C2CCD8BAB80EB3F5E /* JxbHttpProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F82E245AAC9D78E730C9BD342D5A58 /* JxbHttpProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE6F293955FE1368ADB7ECAABC34E66 /* JxbCrashHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C425F416669A2E40A7CBC4D849C5FD3 /* JxbCrashHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0E29827A23078E004BEEAB109E9060D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
 		D0F26A148003C9C8107415B08F5E372F /* TPFDebugTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48023BA4D4F97C103CF74D5BD8654A50 /* TPFDebugTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D63B7E952CE918881AD3068B7CA7A6D7 /* JxbHttpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B04D3873BD117AAF9F4BADDDBF9412 /* JxbHttpVC.m */; };
+		DAB6DF712E4212CA148548596DB9A2D9 /* YDHtmlDisplayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D7807CC567994EDA9AAB07989B5C458A /* YDHtmlDisplayUtils.m */; };
 		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
-		DDC56104D048E27AEC207E41F20DBD1A /* JxbDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F852BA632C834C6685BBD3B907BEA1 /* JxbDebugTool.m */; };
 		EE3BA3D26D0747DCE9DA1B429D52719B /* Pods-TPFDebugTool_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BFE02252E43EDC06E0816B20FAF3CB0 /* Pods-TPFDebugTool_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F97AF53F8234776837107CCDBC29C9F5 /* YDNameValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC4509A4967787D4AE458600332A6A6 /* YDNameValueModel.m */; };
-		FA59277369A6E59452FF2B8587547B14 /* NSURLResponse+Data.h in Headers */ = {isa = PBXBuildFile; fileRef = FD99115BCF37D7FCCABBF1A23EB110F2 /* NSURLResponse+Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6CD5F2F2FE34308E4FCF5B3FF3FAD8A /* YDNameValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4183390DF77907E4524B6DCC991F9EDA /* YDNameValueModel.m */; };
+		F9AABAC64213A16AEEC654CACFDB8344 /* JxbHttpDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A47BF381B8F879961016E58CDC3481 /* JxbHttpDatasource.m */; };
+		FA59277369A6E59452FF2B8587547B14 /* NSURLResponse+Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 40CABC36B430F53A547DDFF12E49F13C /* NSURLResponse+Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,112 +114,113 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0326C43A74F62D0D2402702D3AEDEB9B /* JxbResponseVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbResponseVC.h; sourceTree = "<group>"; };
+		000DFCF690F0792BF8C9E1D7C073E63A /* JxbLogVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbLogVC.h; sourceTree = "<group>"; };
+		00573AA9E49843326A48DD92E25508FC /* NSURLRequest+Identify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+Identify.h"; sourceTree = "<group>"; };
 		052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		060A138367152B423DC1BA343FE62175 /* Pods-TPFDebugTool_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TPFDebugTool_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		09398CC45D0ACD999518A50BB7F4CC4F /* JxbHttpDetailVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpDetailVC.m; sourceTree = "<group>"; };
 		0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		0C3B00913616CDBBDBBE9834FEE84D9F /* JxbMemoryHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbMemoryHelper.h; sourceTree = "<group>"; };
+		0D12782A22B86608920B2031751FAA65 /* JxbLogVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbLogVC.m; sourceTree = "<group>"; };
+		0EC6773D4A0D9A2D9C9D3511B870E138 /* JxbHttpDetailVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpDetailVC.h; sourceTree = "<group>"; };
 		1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		17BF21995F140154F2CADD525FDBAD27 /* NSURLResponse+Data.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+Data.m"; sourceTree = "<group>"; };
+		15E49AD41C17E554CBA6C11A10BB484B /* JxbBaseVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbBaseVC.m; sourceTree = "<group>"; };
+		1B19A9ECCD986A7CD439AF46B8B3C445 /* JxbBaseVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbBaseVC.h; sourceTree = "<group>"; };
+		1B712B2B6C2751DBE265CE568694ECC0 /* JxbHttpCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpCell.h; sourceTree = "<group>"; };
 		1D3C8B06EAC682D8FFC1D23095FC27B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DC4509A4967787D4AE458600332A6A6 /* YDNameValueModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDNameValueModel.m; sourceTree = "<group>"; };
-		1E395346421DF9CC00DA95190E4256DD /* YDNameValueModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDNameValueModel.h; sourceTree = "<group>"; };
-		225845AC7659CDA9917F9C8E2EA5A46D /* NSURLSessionTask+Data.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Data.h"; sourceTree = "<group>"; };
+		20A47BF381B8F879961016E58CDC3481 /* JxbHttpDatasource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpDatasource.m; sourceTree = "<group>"; };
+		24A1BA1F41D1BA8ACBBDB98724F06D97 /* JxbDebugVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbDebugVC.h; sourceTree = "<group>"; };
 		24F912FE9D9BD6D9369FFCA6A629EF49 /* TPFDebugTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPFDebugTool-dummy.m"; sourceTree = "<group>"; };
-		287AEDEFB23AE08FF3E98A55A9F2862F /* YDRequestCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDRequestCell.h; sourceTree = "<group>"; };
-		28B04D3873BD117AAF9F4BADDDBF9412 /* JxbHttpVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpVC.m; sourceTree = "<group>"; };
 		2B717F4577F4ED1CC197041F326B9011 /* TPFDebugTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPFDebugTool-prefix.pch"; sourceTree = "<group>"; };
 		2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		323700E39E959F0DDCD6030FBCF8BFA1 /* NSURLRequest+Identify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Identify.m"; sourceTree = "<group>"; };
+		311F316DA8E9C5E368A9A1990A678268 /* JxbContentVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbContentVC.m; sourceTree = "<group>"; };
 		332E6AD60D55668B256303B802FC8515 /* Pods-TPFDebugTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPFDebugTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		36ED4CC3B3D2C568AE0B504DD34CC03B /* JxbHttpVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpVC.h; sourceTree = "<group>"; };
 		382EE971DAA089DA13BA5A05B30053BB /* Pods-TPFDebugTool_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TPFDebugTool_Example.modulemap"; sourceTree = "<group>"; };
+		3835D4677B2160120F4058FCA41EF1C3 /* JxbCrashVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbCrashVC.h; sourceTree = "<group>"; };
 		39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
-		3F79A191EB80F3383F782359ABF2C6F1 /* JxbCrashVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbCrashVC.h; sourceTree = "<group>"; };
-		3F83C34919C2B376E9FF98196EB1AF1D /* JxbHttpCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpCell.m; sourceTree = "<group>"; };
-		4014231D81B79CBB88E5DA2D224F86A7 /* JxbMemoryHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbMemoryHelper.h; sourceTree = "<group>"; };
+		4058D3AF02385455CB42866948519B94 /* JxbHttpProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpProtocol.m; sourceTree = "<group>"; };
+		40CABC36B430F53A547DDFF12E49F13C /* NSURLResponse+Data.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+Data.h"; sourceTree = "<group>"; };
+		4183390DF77907E4524B6DCC991F9EDA /* YDNameValueModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDNameValueModel.m; sourceTree = "<group>"; };
 		432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
-		43E067D5C1A33A00980E1A2883EC0D35 /* JxbMemoryHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbMemoryHelper.m; sourceTree = "<group>"; };
-		453B092D0828808722A33B66A849CC53 /* JxbHttpProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpProtocol.h; sourceTree = "<group>"; };
-		4800A544F1B95C8F800B75BD233CEF3D /* JxbHttpVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpVC.h; sourceTree = "<group>"; };
+		45450F89CF62CC20216AD97640943E37 /* JxbResponseVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbResponseVC.m; sourceTree = "<group>"; };
 		48023BA4D4F97C103CF74D5BD8654A50 /* TPFDebugTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPFDebugTool-umbrella.h"; sourceTree = "<group>"; };
 		48BBEBFF4DB15D1EB423E8C5723D4ACD /* Pods-TPFDebugTool_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TPFDebugTool_Example-dummy.m"; sourceTree = "<group>"; };
 		49920234BE7E7FE2157C721A4A6E333F /* ResourceBundle-TPFDebugTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TPFDebugTool-Info.plist"; sourceTree = "<group>"; };
-		49BB127B468719517EE6B64A6B0F917E /* NSURLSessionTask+Swizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Swizzling.h"; sourceTree = "<group>"; };
-		4A2DC8C50333292F80F10800A8ABAC98 /* NSURLSessionTask+Data.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Data.m"; sourceTree = "<group>"; };
+		4AA940832030E8C5C2A5055CD01B548D /* JxbCrashVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbCrashVC.m; sourceTree = "<group>"; };
+		4C425F416669A2E40A7CBC4D849C5FD3 /* JxbCrashHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbCrashHelper.h; sourceTree = "<group>"; };
 		52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		5725A2B9FC6B90ED133E68C0350EEFC8 /* YDRequestVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDRequestVC.h; sourceTree = "<group>"; };
 		575C2BBD2789C9D95B8BB7803628C788 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		5BFE02252E43EDC06E0816B20FAF3CB0 /* Pods-TPFDebugTool_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TPFDebugTool_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5C6F9AD1965F042A914E38B5AFDFC6F6 /* JxbLogVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbLogVC.m; sourceTree = "<group>"; };
-		5EE8B25967EF5560DB41CBE7BA8EB8BD /* JxbHttpDetailVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpDetailVC.h; sourceTree = "<group>"; };
-		645788CA8469235876252F96C3C41F12 /* JxbCrashHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbCrashHelper.m; sourceTree = "<group>"; };
+		5F0C35C01D2F839853A257B814E3527F /* JxbDebugTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbDebugTool.h; sourceTree = "<group>"; };
 		6618989A80F12C6A9C1F2ABB5067C6AD /* Pods-TPFDebugTool_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TPFDebugTool_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		68DCE64AE80C78250C59777125BE191F /* YDRequestVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDRequestVC.m; sourceTree = "<group>"; };
 		6AA705AD3B859C9DA1A9E02E423A8507 /* Pods-TPFDebugTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPFDebugTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6C28DF12C0143793EF3C014698D0E996 /* YDRequestVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDRequestVC.h; sourceTree = "<group>"; };
 		6E66B4218824CF8160D93713DDBEEA82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F79372F9B2AA31ECC80442171C85EC6 /* Pods-TPFDebugTool_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPFDebugTool_Example-resources.sh"; sourceTree = "<group>"; };
 		7060B97A181344E195DF5648AB816778 /* Pods_TPFDebugTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TPFDebugTool_Example.framework; path = "Pods-TPFDebugTool_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7217560E661BA2F18B7F3B56822847F7 /* JxbDebugVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbDebugVC.m; sourceTree = "<group>"; };
+		72D9AA01451B42B974636F9FF1BF9BF9 /* NSURLRequest+Identify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Identify.m"; sourceTree = "<group>"; };
 		73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		73DA14CB9AAF46BFF54DF90D7E92B842 /* Pods-TPFDebugTool_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TPFDebugTool_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73DE4FA2FACC0CF7F47517B15CDA7B57 /* Pods-TPFDebugTool_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPFDebugTool_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		763CCEB33904E8ACE059B1E52ECF0497 /* JxbHttpDetailVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpDetailVC.m; sourceTree = "<group>"; };
+		77CE60A13F0AEFAD25977208DA7632DC /* YDNameValueModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDNameValueModel.h; sourceTree = "<group>"; };
+		7B6BCFC95FF69F3D267CDD2273CFF667 /* JxbHttpDatasource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpDatasource.h; sourceTree = "<group>"; };
+		7D167DD463343FCEF496789B9B2443B2 /* JxbResponseVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbResponseVC.h; sourceTree = "<group>"; };
 		7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		809A1E95404D26482A6708BE10300907 /* JxbHttpCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpCell.m; sourceTree = "<group>"; };
 		823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		844D2413A5A817ADE4D6C6F35BF74D47 /* NSURLRequest+Identify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+Identify.h"; sourceTree = "<group>"; };
 		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
-		8834E9BEA2316D3F410EF7D32C65E9D4 /* YDJSONDisplayUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDJSONDisplayUtils.h; sourceTree = "<group>"; };
-		8844ECFE6F40218FACB0CAA6D8399B6A /* JxbHttpDatasource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpDatasource.h; sourceTree = "<group>"; };
-		8FC2BC0EDF5D5673D7AB75FE66959F74 /* JxbDebugVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbDebugVC.h; sourceTree = "<group>"; };
-		917E6C31E44C6C8C7BAC66DA95334CB7 /* YDJSONDisplayUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDJSONDisplayUtils.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93E9823D6CAF40F8E94DF7BDDBB8B078 /* NSURLSessionTask+Swizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Swizzling.m"; sourceTree = "<group>"; };
-		948EFE50045A4F6C9D06D6A38C6C5B5D /* JxbContentVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbContentVC.m; sourceTree = "<group>"; };
+		954C40D42370717707C6913DF1B0F7E4 /* JxbContentVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbContentVC.h; sourceTree = "<group>"; };
+		968743EF54A878D45E930A98886473A2 /* YDRequestCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDRequestCell.m; sourceTree = "<group>"; };
 		968F7C5652D8060889556207B3B7D090 /* Pods_TPFDebugTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TPFDebugTool_Tests.framework; path = "Pods-TPFDebugTool_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		99B119867BBDC6999C942D9875D89EB4 /* JxbBaseVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbBaseVC.m; sourceTree = "<group>"; };
-		9BEA9D763905CD0B2FC0822B3B9B1158 /* JxbDebugTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbDebugTool.h; sourceTree = "<group>"; };
+		972BAD02138E6DE4A890C367C4DBD1BE /* JxbDebugVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbDebugVC.m; sourceTree = "<group>"; };
+		9BF1B449C0F2CF0DB271B60DB033C91F /* NSURLSessionTask+Swizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Swizzling.h"; sourceTree = "<group>"; };
 		9CBF911D98C691C96D6BFB2C40D6DD3E /* Pods-TPFDebugTool_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPFDebugTool_Tests-resources.sh"; sourceTree = "<group>"; };
+		9D8A9D3590583111D2198E2F589DA669 /* JxbMemoryHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbMemoryHelper.m; sourceTree = "<group>"; };
 		9DC67E7134D0E236B2E63DE8BC3784B8 /* TPFDebugTool.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TPFDebugTool.bundle; path = TPFDebugTool.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10B2BA66DD49B8C680C9AA550CE3D52 /* YDRequestVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDRequestVC.m; sourceTree = "<group>"; };
 		A25E229C56C153A0761C7C257CD2B49D /* Pods-TPFDebugTool_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TPFDebugTool_Example-umbrella.h"; sourceTree = "<group>"; };
 		A27810809BAD71E4022600B21251449F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		A806D9CC0356FD4C715FCD13A55A6CC6 /* YDRequestCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDRequestCell.m; sourceTree = "<group>"; };
-		A827501970D62FF32EF280FE6C55F556 /* JxbHttpDatasource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpDatasource.m; sourceTree = "<group>"; };
 		AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		ADB6355C7B8B5D0392671D65DACF4F90 /* JxbCrashVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbCrashVC.m; sourceTree = "<group>"; };
+		ACB46E4FF58B67D216E627B62F551529 /* NSURLSessionTask+Data.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Data.h"; sourceTree = "<group>"; };
 		AF93B81285EF42B79EA6C5ACC0EB0249 /* Pods-TPFDebugTool_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPFDebugTool_Example-frameworks.sh"; sourceTree = "<group>"; };
-		B3D979C0E6DDB542C9264347D63AB8AC /* YDHtmlDisplayUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDHtmlDisplayUtils.m; sourceTree = "<group>"; };
+		B0E71F56336887C21474DC2D548129E8 /* NSURLSessionTask+Swizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Swizzling.m"; sourceTree = "<group>"; };
+		B1D76B87515C9931C8883230064E07DE /* NSURLResponse+Data.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+Data.m"; sourceTree = "<group>"; };
+		B3F82E245AAC9D78E730C9BD342D5A58 /* JxbHttpProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpProtocol.h; sourceTree = "<group>"; };
 		B64CAB23CC78017144735A980BD272CC /* Pods-TPFDebugTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPFDebugTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B69BFEF07EBB762DC941EC0BC8E24EC5 /* Pods-TPFDebugTool_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TPFDebugTool_Tests.modulemap"; sourceTree = "<group>"; };
 		B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
+		BA1FF70D178E9EB97C4FB807862BFB72 /* JxbHttpVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpVC.m; sourceTree = "<group>"; };
+		BAA1B294FB3B37B11F27C7F6F02F22E7 /* YDJSONDisplayUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDJSONDisplayUtils.h; sourceTree = "<group>"; };
 		BC793025F605CA9157CD6C92553D4B6F /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6D49029C3199DA51D61D879605556A /* Pods-TPFDebugTool_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TPFDebugTool_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BECD22230D10647197ED274E81E47AB7 /* JxbCrashHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbCrashHelper.h; sourceTree = "<group>"; };
+		C3794E5A22937B7D610EF43B6CC97812 /* YDJSONDisplayUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDJSONDisplayUtils.m; sourceTree = "<group>"; };
 		C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C96E0C910026694102CE1CDCB98D69A6 /* JxbLogVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbLogVC.h; sourceTree = "<group>"; };
 		CBD67B87844015365FC2B8C757D97AE9 /* Pods-TPFDebugTool_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TPFDebugTool_Tests-dummy.m"; sourceTree = "<group>"; };
 		CC12BCFA3FC0B8C307F5B38C673EDD12 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		D20F32D1A240D8C64916E099E8E29BC5 /* YDRequestCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = YDRequestCell.xib; sourceTree = "<group>"; };
+		D7807CC567994EDA9AAB07989B5C458A /* YDHtmlDisplayUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDHtmlDisplayUtils.m; sourceTree = "<group>"; };
 		D80EA6F95487555BF9C5B792CCE174F3 /* TPFDebugTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPFDebugTool.xcconfig; sourceTree = "<group>"; };
-		D8B384D0B4A964A541098EAF0CBDD257 /* JxbBaseVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbBaseVC.h; sourceTree = "<group>"; };
 		D9530B045A22BA1953D1FBF9755519B4 /* YDRequestVC.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = YDRequestVC.xib; sourceTree = "<group>"; };
 		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
-		DA7D85A37E7659790EE484F93AE41602 /* JxbResponseVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbResponseVC.m; sourceTree = "<group>"; };
+		D9A1EA9CF7A91B9FEDAF6A6372BD6979 /* YDRequestCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDRequestCell.h; sourceTree = "<group>"; };
 		DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		DD55973238CE6CB9AE3DDF08E946FBC9 /* TPFDebugTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TPFDebugTool.modulemap; sourceTree = "<group>"; };
-		DE1CB141E5746F0F2F2FFE3BFB636CB1 /* JxbHttpProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpProtocol.m; sourceTree = "<group>"; };
 		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		EAFEA9C28CE596454AB3B1BB2EFCECA9 /* JxbContentVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbContentVC.h; sourceTree = "<group>"; };
+		E9B3D11483608A61A3643EE4E056C3B4 /* JxbCrashHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbCrashHelper.m; sourceTree = "<group>"; };
+		EDD434AC692D17C61D694261727204BA /* YDHtmlDisplayUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDHtmlDisplayUtils.h; sourceTree = "<group>"; };
 		EF8E0BDCDEF181CEF2C021EC28AC75A2 /* Pods-TPFDebugTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPFDebugTool_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F0C24E6C56A789E5B07DDE52A66929CA /* YDHtmlDisplayUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDHtmlDisplayUtils.h; sourceTree = "<group>"; };
+		F149C1530A4F994AA863C23CBD44BC3A /* JxbDebugTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbDebugTool.m; sourceTree = "<group>"; };
 		F57F23439CBA95D2017A974FD91357A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F87857796F1DBD8CC73242ABA1DB2234 /* JxbHttpCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpCell.h; sourceTree = "<group>"; };
-		F9F852BA632C834C6685BBD3B907BEA1 /* JxbDebugTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbDebugTool.m; sourceTree = "<group>"; };
+		F637FDA3DEEC29197617D94316129CEA /* NSURLSessionTask+Data.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Data.m"; sourceTree = "<group>"; };
 		FC29FADF1AE0E81A7FB605C53B202765 /* TPFDebugTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TPFDebugTool.framework; path = TPFDebugTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD99115BCF37D7FCCABBF1A23EB110F2 /* NSURLResponse+Data.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+Data.h"; sourceTree = "<group>"; };
+		FC2B3ADD6E3397CE94F0590C2D222405 /* TPFDebugTool.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPFDebugTool.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,55 +310,56 @@
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
-		2A361FF4DC21B1FB868EAB4AD4E3DCC0 /* Classes */ = {
+		3D9D7BEB7C182D87F3280934650F3F89 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D8B384D0B4A964A541098EAF0CBDD257 /* JxbBaseVC.h */,
-				99B119867BBDC6999C942D9875D89EB4 /* JxbBaseVC.m */,
-				EAFEA9C28CE596454AB3B1BB2EFCECA9 /* JxbContentVC.h */,
-				948EFE50045A4F6C9D06D6A38C6C5B5D /* JxbContentVC.m */,
-				BECD22230D10647197ED274E81E47AB7 /* JxbCrashHelper.h */,
-				645788CA8469235876252F96C3C41F12 /* JxbCrashHelper.m */,
-				3F79A191EB80F3383F782359ABF2C6F1 /* JxbCrashVC.h */,
-				ADB6355C7B8B5D0392671D65DACF4F90 /* JxbCrashVC.m */,
-				9BEA9D763905CD0B2FC0822B3B9B1158 /* JxbDebugTool.h */,
-				F9F852BA632C834C6685BBD3B907BEA1 /* JxbDebugTool.m */,
-				8FC2BC0EDF5D5673D7AB75FE66959F74 /* JxbDebugVC.h */,
-				7217560E661BA2F18B7F3B56822847F7 /* JxbDebugVC.m */,
-				F87857796F1DBD8CC73242ABA1DB2234 /* JxbHttpCell.h */,
-				3F83C34919C2B376E9FF98196EB1AF1D /* JxbHttpCell.m */,
-				8844ECFE6F40218FACB0CAA6D8399B6A /* JxbHttpDatasource.h */,
-				A827501970D62FF32EF280FE6C55F556 /* JxbHttpDatasource.m */,
-				5EE8B25967EF5560DB41CBE7BA8EB8BD /* JxbHttpDetailVC.h */,
-				09398CC45D0ACD999518A50BB7F4CC4F /* JxbHttpDetailVC.m */,
-				453B092D0828808722A33B66A849CC53 /* JxbHttpProtocol.h */,
-				DE1CB141E5746F0F2F2FFE3BFB636CB1 /* JxbHttpProtocol.m */,
-				4800A544F1B95C8F800B75BD233CEF3D /* JxbHttpVC.h */,
-				28B04D3873BD117AAF9F4BADDDBF9412 /* JxbHttpVC.m */,
-				C96E0C910026694102CE1CDCB98D69A6 /* JxbLogVC.h */,
-				5C6F9AD1965F042A914E38B5AFDFC6F6 /* JxbLogVC.m */,
-				4014231D81B79CBB88E5DA2D224F86A7 /* JxbMemoryHelper.h */,
-				43E067D5C1A33A00980E1A2883EC0D35 /* JxbMemoryHelper.m */,
-				0326C43A74F62D0D2402702D3AEDEB9B /* JxbResponseVC.h */,
-				DA7D85A37E7659790EE484F93AE41602 /* JxbResponseVC.m */,
-				844D2413A5A817ADE4D6C6F35BF74D47 /* NSURLRequest+Identify.h */,
-				323700E39E959F0DDCD6030FBCF8BFA1 /* NSURLRequest+Identify.m */,
-				FD99115BCF37D7FCCABBF1A23EB110F2 /* NSURLResponse+Data.h */,
-				17BF21995F140154F2CADD525FDBAD27 /* NSURLResponse+Data.m */,
-				225845AC7659CDA9917F9C8E2EA5A46D /* NSURLSessionTask+Data.h */,
-				4A2DC8C50333292F80F10800A8ABAC98 /* NSURLSessionTask+Data.m */,
-				49BB127B468719517EE6B64A6B0F917E /* NSURLSessionTask+Swizzling.h */,
-				93E9823D6CAF40F8E94DF7BDDBB8B078 /* NSURLSessionTask+Swizzling.m */,
-				F0C24E6C56A789E5B07DDE52A66929CA /* YDHtmlDisplayUtils.h */,
-				B3D979C0E6DDB542C9264347D63AB8AC /* YDHtmlDisplayUtils.m */,
-				8834E9BEA2316D3F410EF7D32C65E9D4 /* YDJSONDisplayUtils.h */,
-				917E6C31E44C6C8C7BAC66DA95334CB7 /* YDJSONDisplayUtils.m */,
-				1E395346421DF9CC00DA95190E4256DD /* YDNameValueModel.h */,
-				1DC4509A4967787D4AE458600332A6A6 /* YDNameValueModel.m */,
-				287AEDEFB23AE08FF3E98A55A9F2862F /* YDRequestCell.h */,
-				A806D9CC0356FD4C715FCD13A55A6CC6 /* YDRequestCell.m */,
-				6C28DF12C0143793EF3C014698D0E996 /* YDRequestVC.h */,
-				A10B2BA66DD49B8C680C9AA550CE3D52 /* YDRequestVC.m */,
+				1B19A9ECCD986A7CD439AF46B8B3C445 /* JxbBaseVC.h */,
+				15E49AD41C17E554CBA6C11A10BB484B /* JxbBaseVC.m */,
+				954C40D42370717707C6913DF1B0F7E4 /* JxbContentVC.h */,
+				311F316DA8E9C5E368A9A1990A678268 /* JxbContentVC.m */,
+				4C425F416669A2E40A7CBC4D849C5FD3 /* JxbCrashHelper.h */,
+				E9B3D11483608A61A3643EE4E056C3B4 /* JxbCrashHelper.m */,
+				3835D4677B2160120F4058FCA41EF1C3 /* JxbCrashVC.h */,
+				4AA940832030E8C5C2A5055CD01B548D /* JxbCrashVC.m */,
+				5F0C35C01D2F839853A257B814E3527F /* JxbDebugTool.h */,
+				F149C1530A4F994AA863C23CBD44BC3A /* JxbDebugTool.m */,
+				24A1BA1F41D1BA8ACBBDB98724F06D97 /* JxbDebugVC.h */,
+				972BAD02138E6DE4A890C367C4DBD1BE /* JxbDebugVC.m */,
+				1B712B2B6C2751DBE265CE568694ECC0 /* JxbHttpCell.h */,
+				809A1E95404D26482A6708BE10300907 /* JxbHttpCell.m */,
+				7B6BCFC95FF69F3D267CDD2273CFF667 /* JxbHttpDatasource.h */,
+				20A47BF381B8F879961016E58CDC3481 /* JxbHttpDatasource.m */,
+				0EC6773D4A0D9A2D9C9D3511B870E138 /* JxbHttpDetailVC.h */,
+				763CCEB33904E8ACE059B1E52ECF0497 /* JxbHttpDetailVC.m */,
+				B3F82E245AAC9D78E730C9BD342D5A58 /* JxbHttpProtocol.h */,
+				4058D3AF02385455CB42866948519B94 /* JxbHttpProtocol.m */,
+				36ED4CC3B3D2C568AE0B504DD34CC03B /* JxbHttpVC.h */,
+				BA1FF70D178E9EB97C4FB807862BFB72 /* JxbHttpVC.m */,
+				000DFCF690F0792BF8C9E1D7C073E63A /* JxbLogVC.h */,
+				0D12782A22B86608920B2031751FAA65 /* JxbLogVC.m */,
+				0C3B00913616CDBBDBBE9834FEE84D9F /* JxbMemoryHelper.h */,
+				9D8A9D3590583111D2198E2F589DA669 /* JxbMemoryHelper.m */,
+				7D167DD463343FCEF496789B9B2443B2 /* JxbResponseVC.h */,
+				45450F89CF62CC20216AD97640943E37 /* JxbResponseVC.m */,
+				00573AA9E49843326A48DD92E25508FC /* NSURLRequest+Identify.h */,
+				72D9AA01451B42B974636F9FF1BF9BF9 /* NSURLRequest+Identify.m */,
+				40CABC36B430F53A547DDFF12E49F13C /* NSURLResponse+Data.h */,
+				B1D76B87515C9931C8883230064E07DE /* NSURLResponse+Data.m */,
+				ACB46E4FF58B67D216E627B62F551529 /* NSURLSessionTask+Data.h */,
+				F637FDA3DEEC29197617D94316129CEA /* NSURLSessionTask+Data.m */,
+				9BF1B449C0F2CF0DB271B60DB033C91F /* NSURLSessionTask+Swizzling.h */,
+				B0E71F56336887C21474DC2D548129E8 /* NSURLSessionTask+Swizzling.m */,
+				FC2B3ADD6E3397CE94F0590C2D222405 /* TPFDebugTool.pch */,
+				EDD434AC692D17C61D694261727204BA /* YDHtmlDisplayUtils.h */,
+				D7807CC567994EDA9AAB07989B5C458A /* YDHtmlDisplayUtils.m */,
+				BAA1B294FB3B37B11F27C7F6F02F22E7 /* YDJSONDisplayUtils.h */,
+				C3794E5A22937B7D610EF43B6CC97812 /* YDJSONDisplayUtils.m */,
+				77CE60A13F0AEFAD25977208DA7632DC /* YDNameValueModel.h */,
+				4183390DF77907E4524B6DCC991F9EDA /* YDNameValueModel.m */,
+				D9A1EA9CF7A91B9FEDAF6A6372BD6979 /* YDRequestCell.h */,
+				968743EF54A878D45E930A98886473A2 /* YDRequestCell.m */,
+				5725A2B9FC6B90ED133E68C0350EEFC8 /* YDRequestVC.h */,
+				68DCE64AE80C78250C59777125BE191F /* YDRequestVC.m */,
 			);
 			name = Classes;
 			path = Classes;
@@ -465,10 +468,10 @@
 			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
-		AD30135FA46FEB3A2FC31BA9F29E6F7D /* TPFDebugTool */ = {
+		B43698CA330046EDF951CC5DFAC27A02 /* TPFDebugTool */ = {
 			isa = PBXGroup;
 			children = (
-				2A361FF4DC21B1FB868EAB4AD4E3DCC0 /* Classes */,
+				3D9D7BEB7C182D87F3280934650F3F89 /* Classes */,
 			);
 			name = TPFDebugTool;
 			path = TPFDebugTool;
@@ -497,7 +500,7 @@
 			children = (
 				63439142DB39B90D748A9761BA8CD538 /* Resources */,
 				98ECEC505BAE44DC04DC65BF21512D40 /* Support Files */,
-				AD30135FA46FEB3A2FC31BA9F29E6F7D /* TPFDebugTool */,
+				B43698CA330046EDF951CC5DFAC27A02 /* TPFDebugTool */,
 			);
 			name = TPFDebugTool;
 			path = ../..;
@@ -648,7 +651,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18779F6D73AA08907DD0FDF1E629B152 /* Build configuration list for PBXNativeTarget "TPFDebugTool" */;
 			buildPhases = (
-				A238A93DAC600C031D5498AD1F0F530C /* Sources */,
+				AB98786441D3AA6537A14F90A252DA68 /* Sources */,
 				0A0A81ED7681A1BDB076BA03640E898D /* Frameworks */,
 				703C614712EACAD4D274C9B6E8B84D79 /* Resources */,
 				8254E405B09336A7581AE0A0164E8254 /* Headers */,
@@ -764,34 +767,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A238A93DAC600C031D5498AD1F0F530C /* Sources */ = {
+		AB98786441D3AA6537A14F90A252DA68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				542975810D8154691BDD28392B6DF4C7 /* JxbBaseVC.m in Sources */,
-				1D6A2242D6EC22686B6C65B0FA2F3DD4 /* JxbContentVC.m in Sources */,
-				9F8E44A81DD961036E4DA8BA41E15721 /* JxbCrashHelper.m in Sources */,
-				CB243F4CFE1AF93F2510DF9FFEC02249 /* JxbCrashVC.m in Sources */,
-				DDC56104D048E27AEC207E41F20DBD1A /* JxbDebugTool.m in Sources */,
-				BB778AC8434F42FB94DE0270A3BFC9EE /* JxbDebugVC.m in Sources */,
-				29D078D438A95E24B77B13F74FEFA942 /* JxbHttpCell.m in Sources */,
-				4124408FD404A4A970ECF1FFAB7E9105 /* JxbHttpDatasource.m in Sources */,
-				9350E88A5CC92BC0D35ADD832B7CCAE7 /* JxbHttpDetailVC.m in Sources */,
-				47B93BBCA3329193CB1854C4D13FF6D7 /* JxbHttpProtocol.m in Sources */,
-				D63B7E952CE918881AD3068B7CA7A6D7 /* JxbHttpVC.m in Sources */,
-				03E767560D36D8E6F34486FBD662AD39 /* JxbLogVC.m in Sources */,
-				00E8D843F43F4F45AF052E3D42291AA4 /* JxbMemoryHelper.m in Sources */,
-				6E1A404639E3CA754326067F101E7065 /* JxbResponseVC.m in Sources */,
-				679426625F23FDCFADC2602E3BDAC41D /* NSURLRequest+Identify.m in Sources */,
-				2370BE8E3EE23CC6409EF75B29E3F2A9 /* NSURLResponse+Data.m in Sources */,
-				1A697176051D6B887F514AA3046AFC69 /* NSURLSessionTask+Data.m in Sources */,
-				5F1DD92B006E6B7133FDBB8086592F89 /* NSURLSessionTask+Swizzling.m in Sources */,
-				615A6B7030FBD86856E628C496DE913E /* TPFDebugTool-dummy.m in Sources */,
-				9556FDE2C407BEB874882596072642DB /* YDHtmlDisplayUtils.m in Sources */,
-				4CF1314F22DF9AF383E4F5A0149D8A17 /* YDJSONDisplayUtils.m in Sources */,
-				F97AF53F8234776837107CCDBC29C9F5 /* YDNameValueModel.m in Sources */,
-				5B5C62BCD538C246D5590337951D0596 /* YDRequestCell.m in Sources */,
-				21D2C6DCC4A9E95B99662BD8062FE679 /* YDRequestVC.m in Sources */,
+				68A4EBC7CBF809641BD0EFA0045FC997 /* JxbBaseVC.m in Sources */,
+				4A6886EDDC53DF2AD5AC4EE26D790F01 /* JxbContentVC.m in Sources */,
+				8773325775530FF506311B9A8A673280 /* JxbCrashHelper.m in Sources */,
+				C9D99605311767442E2952C1FAC03626 /* JxbCrashVC.m in Sources */,
+				89D52E1A94335786C08D802B165DFE01 /* JxbDebugTool.m in Sources */,
+				777B50CF3CD882B61834C1699BE08240 /* JxbDebugVC.m in Sources */,
+				6FD0FA9675284C3C0EE48E881B304C17 /* JxbHttpCell.m in Sources */,
+				F9AABAC64213A16AEEC654CACFDB8344 /* JxbHttpDatasource.m in Sources */,
+				C823FDA14DBF7FD359DBDAAD580181D7 /* JxbHttpDetailVC.m in Sources */,
+				388F2DEB49D29351C67CDA6BD79C7B60 /* JxbHttpProtocol.m in Sources */,
+				82BE6E43137942E099562321C3C25600 /* JxbHttpVC.m in Sources */,
+				87F5E4F00462AB077CA72D62A2C07F94 /* JxbLogVC.m in Sources */,
+				3D55EFDAB193EE645574B26836437FD1 /* JxbMemoryHelper.m in Sources */,
+				6D5F0B4388E190D03625A6D3EE773681 /* JxbResponseVC.m in Sources */,
+				88BA33314262CA99D3DA19318E4A1F80 /* NSURLRequest+Identify.m in Sources */,
+				33BF42521B1BD830434D62FA3A286D94 /* NSURLResponse+Data.m in Sources */,
+				B58932FADD2452C82C35345D3342693D /* NSURLSessionTask+Data.m in Sources */,
+				A75704393A619BAACDAD71D289187AFA /* NSURLSessionTask+Swizzling.m in Sources */,
+				81A44A10FBA7369BED6BD6F608C89CC4 /* TPFDebugTool-dummy.m in Sources */,
+				95B9F15AF421EB45DAAD3BFD9E9A2A9C /* TPFDebugTool.pch in Sources */,
+				DAB6DF712E4212CA148548596DB9A2D9 /* YDHtmlDisplayUtils.m in Sources */,
+				58F464174720076A2D799A4EDA0C8741 /* YDJSONDisplayUtils.m in Sources */,
+				F6CD5F2F2FE34308E4FCF5B3FF3FAD8A /* YDNameValueModel.m in Sources */,
+				1CC8FA0CC2BC1032AA05E61F7AE999F2 /* YDRequestCell.m in Sources */,
+				31F9C08BEB08855A5DF3C10A97FC80AB /* YDRequestVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

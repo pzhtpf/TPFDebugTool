@@ -23,5 +23,6 @@
     "TPFDebugTool": [
       "TPFDebugTool/Assets/*.{storyboard,xib}"
     ]
-  }
+  },
+  "prefix_header_file": "TPFDebugTool/Classes/TPFDebugTool.pch"
 }
