@@ -6,15 +6,37 @@
 //  Copyright (c) 2017 pzhtpf. All rights reserved.
 //
 
+#define kColorWithRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0 \
+blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
+
 #import "TPFAppDelegate.h"
 
-
+#if DEBUG
+#import "JxbDebugTool.h"
+#endif
 
 @implementation TPFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+#if DEBUG
+    [[JxbDebugTool shareInstance] setMainColor:kColorWithRGB(0xff755a)]; //设置主色调
+    [[JxbDebugTool shareInstance] enableDebugMode];//启用debug工具
+    
+    // 添加要监测的域名
+    NSMutableArray *array = [[JxbDebugTool shareInstance].arrOnlyHosts mutableCopy];
+    if(!array){
+        array = [NSMutableArray new];
+    }
+    [array addObject:@"api.yaduo.com"];
+    [JxbDebugTool shareInstance].arrOnlyHosts = array;
+    
+#endif
+    
     return YES;
 }
 

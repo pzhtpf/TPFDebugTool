@@ -30,7 +30,7 @@
 -(void)initView{
 
     NSBundle *bundle = [NSBundle bundleForClass:[YDRequestVC class]];
-    NSURL *bundleURL = [bundle URLForResource:@"AtourlifeFoundationDebugTool" withExtension:@"bundle"];
+    NSURL *bundleURL = [bundle URLForResource:@"TPFDebugTool" withExtension:@"bundle"];
     NSBundle *resourceBundle = [NSBundle bundleWithURL: bundleURL];
     [self.tableView registerNib:[UINib nibWithNibName:@"YDRequestCell" bundle:resourceBundle] forCellReuseIdentifier:@"YDRequestCell"];
     self.tableView.delegate = self;

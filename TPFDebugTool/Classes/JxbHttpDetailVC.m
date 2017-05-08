@@ -160,7 +160,7 @@
     else if ((indexPath.row == 7 && self.detail.requestBody.length > 0) || indexPath.row==2) {
         
         NSBundle *bundle = [NSBundle bundleForClass:[YDRequestVC class]];
-        NSURL *bundleURL = [bundle URLForResource:@"AtourlifeFoundationDebugTool" withExtension:@"bundle"];
+        NSURL *bundleURL = [bundle URLForResource:@"TPFDebugTool" withExtension:@"bundle"];
         NSBundle *resourceBundle = [NSBundle bundleWithURL: bundleURL];
         YDRequestVC* vc = [[YDRequestVC alloc] initWithNibName:@"YDRequestVC" bundle:resourceBundle];
   

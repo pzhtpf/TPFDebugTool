@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -7,6 +22,7 @@ PODS:
   - TPFDebugTool (0.1.0)
 
 DEPENDENCIES:
+  - AFNetworking
   - FBSnapshotTestCase
   - TPFDebugTool (from `../`)
 
@@ -15,9 +31,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
   TPFDebugTool: fe2d906cc3d86e05a01604fdd1b8621579aed20f
 
-PODFILE CHECKSUM: 468584cf2b56ca0eebf8768d1a38b10b6f467ab1
+PODFILE CHECKSUM: ff585d8770191d8770c4ba4b2c7aea167507be1a
 
 COCOAPODS: 1.2.1

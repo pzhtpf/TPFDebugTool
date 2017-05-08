@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'TPFDebugTool_Example' do
   pod 'TPFDebugTool', :path => '../'
+  pod 'AFNetworking'
 
   target 'TPFDebugTool_Tests' do
     inherit! :search_paths
