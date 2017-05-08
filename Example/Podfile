@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TPFDebugTool_Example' do
+  pod 'TPFDebugTool', :path => '../'
+
+  target 'TPFDebugTool_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
