@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "TPFDebugTool/Classes/**/*"
+  "source_files": "TPFDebugTool/Classes/**/*",
+  "resource_bundles": {
+    "TPFDebugTool": [
+      "TPFDebugTool/Assets/*.{storyboard,xib}"
+    ]
+  }
 }

@@ -7,40 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00E8D843F43F4F45AF052E3D42291AA4 /* JxbMemoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E067D5C1A33A00980E1A2883EC0D35 /* JxbMemoryHelper.m */; };
+		03E767560D36D8E6F34486FBD662AD39 /* JxbLogVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F9AD1965F042A914E38B5AFDFC6F6 /* JxbLogVC.m */; };
 		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07748EC10524F258241BA0B37E560414 /* JxbDebugVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FC2BC0EDF5D5673D7AB75FE66959F74 /* JxbDebugVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */; };
+		12D985172B45241D5AC5883B6BC6F51D /* JxbHttpDetailVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE8B25967EF5560DB41CBE7BA8EB8BD /* JxbHttpDetailVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		157782C5276E71D8D2581965B3DA6C55 /* TPFDebugTool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DC67E7134D0E236B2E63DE8BC3784B8 /* TPFDebugTool.bundle */; };
+		1A697176051D6B887F514AA3046AFC69 /* NSURLSessionTask+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC8C50333292F80F10800A8ABAC98 /* NSURLSessionTask+Data.m */; };
 		1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */; };
+		1C6A76673C23A43589BD08FE7543A6F9 /* JxbResponseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 0326C43A74F62D0D2402702D3AEDEB9B /* JxbResponseVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D6A2242D6EC22686B6C65B0FA2F3DD4 /* JxbContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948EFE50045A4F6C9D06D6A38C6C5B5D /* JxbContentVC.m */; };
+		1DB87FAA79BD8940956600956C65BE03 /* NSURLRequest+Identify.h in Headers */ = {isa = PBXBuildFile; fileRef = 844D2413A5A817ADE4D6C6F35BF74D47 /* NSURLRequest+Identify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21954A7DB1967B3403D38D5193967AC8 /* NSURLSessionTask+Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 225845AC7659CDA9917F9C8E2EA5A46D /* NSURLSessionTask+Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D2C6DCC4A9E95B99662BD8062FE679 /* YDRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A10B2BA66DD49B8C680C9AA550CE3D52 /* YDRequestVC.m */; };
+		2370BE8E3EE23CC6409EF75B29E3F2A9 /* NSURLResponse+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BF21995F140154F2CADD525FDBAD27 /* NSURLResponse+Data.m */; };
 		27B3B082CA0A997C9753EEB3B03794F4 /* Pods-TPFDebugTool_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD67B87844015365FC2B8C757D97AE9 /* Pods-TPFDebugTool_Tests-dummy.m */; };
+		29D078D438A95E24B77B13F74FEFA942 /* JxbHttpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F83C34919C2B376E9FF98196EB1AF1D /* JxbHttpCell.m */; };
 		2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33AA437DECB78211A6F7A1A04CE61D31 /* TPFDebugTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE8005AD2C6103D27124F50DCA24DDFD /* TPFDebugTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3236DED7B75866442DC49F562B852156 /* YDHtmlDisplayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F0C24E6C56A789E5B07DDE52A66929CA /* YDHtmlDisplayUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */; };
+		3C2A6306DA7316555B4258E42FD5378C /* JxbHttpDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 8844ECFE6F40218FACB0CAA6D8399B6A /* JxbHttpDatasource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4124408FD404A4A970ECF1FFAB7E9105 /* JxbHttpDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = A827501970D62FF32EF280FE6C55F556 /* JxbHttpDatasource.m */; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		47B93BBCA3329193CB1854C4D13FF6D7 /* JxbHttpProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1CB141E5746F0F2F2FFE3BFB636CB1 /* JxbHttpProtocol.m */; };
+		4CF1314F22DF9AF383E4F5A0149D8A17 /* YDJSONDisplayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 917E6C31E44C6C8C7BAC66DA95334CB7 /* YDJSONDisplayUtils.m */; };
+		4D2904457879DEF79253392FE8F76D02 /* YDRequestVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C28DF12C0143793EF3C014698D0E996 /* YDRequestVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EECAAC12FC14E16FCEDD38F094612EF /* JxbHttpCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F87857796F1DBD8CC73242ABA1DB2234 /* JxbHttpCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */; };
+		542975810D8154691BDD28392B6DF4C7 /* JxbBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B119867BBDC6999C942D9875D89EB4 /* JxbBaseVC.m */; };
+		582B93F16D0DED4585B94EA368C51A3C /* NSURLSessionTask+Swizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 49BB127B468719517EE6B64A6B0F917E /* NSURLSessionTask+Swizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B5C62BCD538C246D5590337951D0596 /* YDRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A806D9CC0356FD4C715FCD13A55A6CC6 /* YDRequestCell.m */; };
 		5BD692F260B83CD9259D4FE49F9361A4 /* Pods-TPFDebugTool_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A25E229C56C153A0761C7C257CD2B49D /* Pods-TPFDebugTool_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F1DD92B006E6B7133FDBB8086592F89 /* NSURLSessionTask+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E9823D6CAF40F8E94DF7BDDBB8B078 /* NSURLSessionTask+Swizzling.m */; };
+		5FB89556F901091D6F09AE3797BCD177 /* JxbDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BEA9D763905CD0B2FC0822B3B9B1158 /* JxbDebugTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		615A6B7030FBD86856E628C496DE913E /* TPFDebugTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F912FE9D9BD6D9369FFCA6A629EF49 /* TPFDebugTool-dummy.m */; };
+		620D33C79386B13BFEDB41D03A4E86EA /* JxbBaseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B384D0B4A964A541098EAF0CBDD257 /* JxbBaseVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63C5B83F83F704DD93C9ABD1DFE41F34 /* YDJSONDisplayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8834E9BEA2316D3F410EF7D32C65E9D4 /* YDJSONDisplayUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		679426625F23FDCFADC2602E3BDAC41D /* NSURLRequest+Identify.m in Sources */ = {isa = PBXBuildFile; fileRef = 323700E39E959F0DDCD6030FBCF8BFA1 /* NSURLRequest+Identify.m */; };
 		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
-		6F868ACC8210881A5E6A628F8293593D /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 738835F6CDB315BD56334D666CC3748E /* ReplaceMe.m */; };
+		6E1A404639E3CA754326067F101E7065 /* JxbResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D85A37E7659790EE484F93AE41602 /* JxbResponseVC.m */; };
+		6EF5D997A6BB2D56111DCE474DE87185 /* JxbHttpVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4800A544F1B95C8F800B75BD233CEF3D /* JxbHttpVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */; };
 		7D5B559A58D8DEE50FE87B67E5CED2AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
 		7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */; };
+		826497908557CA63235253E0E77DC661 /* YDRequestCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 287AEDEFB23AE08FF3E98A55A9F2862F /* YDRequestCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */; };
+		863B88059291FE14E913C6F117B8568F /* JxbContentVC.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFEA9C28CE596454AB3B1BB2EFCECA9 /* JxbContentVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91D0138ACFAD733E4061F12E450C336C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
+		9350E88A5CC92BC0D35ADD832B7CCAE7 /* JxbHttpDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09398CC45D0ACD999518A50BB7F4CC4F /* JxbHttpDetailVC.m */; };
+		9556FDE2C407BEB874882596072642DB /* YDHtmlDisplayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D979C0E6DDB542C9264347D63AB8AC /* YDHtmlDisplayUtils.m */; };
 		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		998CDDFB2C3A7A6CAF9331F37FEAD2DC /* JxbCrashVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F79A191EB80F3383F782359ABF2C6F1 /* JxbCrashVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99E855E6994E148C51DA66F7B1967079 /* YDNameValueModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E395346421DF9CC00DA95190E4256DD /* YDNameValueModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F8E44A81DD961036E4DA8BA41E15721 /* JxbCrashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 645788CA8469235876252F96C3C41F12 /* JxbCrashHelper.m */; };
+		A1EB2096FA5E3CF28AD937B5221C6602 /* YDRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D20F32D1A240D8C64916E099E8E29BC5 /* YDRequestCell.xib */; };
 		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */; };
 		A83EE6DA3C0FABB5FA762B921818CA1E /* Pods-TPFDebugTool_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBEBFF4DB15D1EB423E8C5723D4ACD /* Pods-TPFDebugTool_Example-dummy.m */; };
+		B0E25F96D61D96EA54E676EFF4AECFA5 /* JxbLogVC.h in Headers */ = {isa = PBXBuildFile; fileRef = C96E0C910026694102CE1CDCB98D69A6 /* JxbLogVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2652C4F588484D7F5224F2D7796FBB3 /* JxbMemoryHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4014231D81B79CBB88E5DA2D224F86A7 /* JxbMemoryHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27810809BAD71E4022600B21251449F /* QuartzCore.framework */; };
 		B5CD4AEFE0D4BB965D0A7B9B503B5A31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
 		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB778AC8434F42FB94DE0270A3BFC9EE /* JxbDebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217560E661BA2F18B7F3B56822847F7 /* JxbDebugVC.m */; };
 		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */; };
 		BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C76D5A10D310A00755D56D63810D8357 /* YDRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9530B045A22BA1953D1FBF9755519B4 /* YDRequestVC.xib */; };
 		CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		CB243F4CFE1AF93F2510DF9FFEC02249 /* JxbCrashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6355C7B8B5D0392671D65DACF4F90 /* JxbCrashVC.m */; };
+		CF919E75EB7B165C2CCD8BAB80EB3F5E /* JxbHttpProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 453B092D0828808722A33B66A849CC53 /* JxbHttpProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE6F293955FE1368ADB7ECAABC34E66 /* JxbCrashHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = BECD22230D10647197ED274E81E47AB7 /* JxbCrashHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0E29827A23078E004BEEAB109E9060D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
-		D8B6BD10BD0FE2D5F6E47440E0AD9915 /* TPFDebugTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE98FC6146B9BA3B062254D0B1EF1F1 /* TPFDebugTool-dummy.m */; };
+		D0F26A148003C9C8107415B08F5E372F /* TPFDebugTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48023BA4D4F97C103CF74D5BD8654A50 /* TPFDebugTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D63B7E952CE918881AD3068B7CA7A6D7 /* JxbHttpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B04D3873BD117AAF9F4BADDDBF9412 /* JxbHttpVC.m */; };
 		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
+		DDC56104D048E27AEC207E41F20DBD1A /* JxbDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F852BA632C834C6685BBD3B907BEA1 /* JxbDebugTool.m */; };
 		EE3BA3D26D0747DCE9DA1B429D52719B /* Pods-TPFDebugTool_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BFE02252E43EDC06E0816B20FAF3CB0 /* Pods-TPFDebugTool_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F97AF53F8234776837107CCDBC29C9F5 /* YDNameValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC4509A4967787D4AE458600332A6A6 /* YDNameValueModel.m */; };
+		FA59277369A6E59452FF2B8587547B14 /* NSURLResponse+Data.h in Headers */ = {isa = PBXBuildFile; fileRef = FD99115BCF37D7FCCABBF1A23EB110F2 /* NSURLResponse+Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		36068DF7F7F48D5A83F29DA8A8016676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E94E77BD23974FDBB1855147DFC90BAA;
+			remoteInfo = "TPFDebugTool-TPFDebugTool";
+		};
 		C088C540C01BD2BB47B1C0317EB7A1AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -58,63 +113,112 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0326C43A74F62D0D2402702D3AEDEB9B /* JxbResponseVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbResponseVC.h; sourceTree = "<group>"; };
 		052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		060A138367152B423DC1BA343FE62175 /* Pods-TPFDebugTool_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TPFDebugTool_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		09398CC45D0ACD999518A50BB7F4CC4F /* JxbHttpDetailVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpDetailVC.m; sourceTree = "<group>"; };
 		0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		0EEB0EBF75A407275A9F4A1351E4FB03 /* TPFDebugTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPFDebugTool-prefix.pch"; sourceTree = "<group>"; };
 		1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
+		17BF21995F140154F2CADD525FDBAD27 /* NSURLResponse+Data.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+Data.m"; sourceTree = "<group>"; };
 		1D3C8B06EAC682D8FFC1D23095FC27B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DC4509A4967787D4AE458600332A6A6 /* YDNameValueModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDNameValueModel.m; sourceTree = "<group>"; };
+		1E395346421DF9CC00DA95190E4256DD /* YDNameValueModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDNameValueModel.h; sourceTree = "<group>"; };
+		225845AC7659CDA9917F9C8E2EA5A46D /* NSURLSessionTask+Data.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Data.h"; sourceTree = "<group>"; };
+		24F912FE9D9BD6D9369FFCA6A629EF49 /* TPFDebugTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPFDebugTool-dummy.m"; sourceTree = "<group>"; };
+		287AEDEFB23AE08FF3E98A55A9F2862F /* YDRequestCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDRequestCell.h; sourceTree = "<group>"; };
+		28B04D3873BD117AAF9F4BADDDBF9412 /* JxbHttpVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpVC.m; sourceTree = "<group>"; };
+		2B717F4577F4ED1CC197041F326B9011 /* TPFDebugTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPFDebugTool-prefix.pch"; sourceTree = "<group>"; };
 		2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		323700E39E959F0DDCD6030FBCF8BFA1 /* NSURLRequest+Identify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Identify.m"; sourceTree = "<group>"; };
 		332E6AD60D55668B256303B802FC8515 /* Pods-TPFDebugTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPFDebugTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		382EE971DAA089DA13BA5A05B30053BB /* Pods-TPFDebugTool_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TPFDebugTool_Example.modulemap"; sourceTree = "<group>"; };
 		39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		3F79A191EB80F3383F782359ABF2C6F1 /* JxbCrashVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbCrashVC.h; sourceTree = "<group>"; };
+		3F83C34919C2B376E9FF98196EB1AF1D /* JxbHttpCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpCell.m; sourceTree = "<group>"; };
+		4014231D81B79CBB88E5DA2D224F86A7 /* JxbMemoryHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbMemoryHelper.h; sourceTree = "<group>"; };
 		432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
+		43E067D5C1A33A00980E1A2883EC0D35 /* JxbMemoryHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbMemoryHelper.m; sourceTree = "<group>"; };
+		453B092D0828808722A33B66A849CC53 /* JxbHttpProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpProtocol.h; sourceTree = "<group>"; };
+		4800A544F1B95C8F800B75BD233CEF3D /* JxbHttpVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpVC.h; sourceTree = "<group>"; };
+		48023BA4D4F97C103CF74D5BD8654A50 /* TPFDebugTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPFDebugTool-umbrella.h"; sourceTree = "<group>"; };
 		48BBEBFF4DB15D1EB423E8C5723D4ACD /* Pods-TPFDebugTool_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TPFDebugTool_Example-dummy.m"; sourceTree = "<group>"; };
+		49920234BE7E7FE2157C721A4A6E333F /* ResourceBundle-TPFDebugTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TPFDebugTool-Info.plist"; sourceTree = "<group>"; };
+		49BB127B468719517EE6B64A6B0F917E /* NSURLSessionTask+Swizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Swizzling.h"; sourceTree = "<group>"; };
+		4A2DC8C50333292F80F10800A8ABAC98 /* NSURLSessionTask+Data.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Data.m"; sourceTree = "<group>"; };
 		52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		575C2BBD2789C9D95B8BB7803628C788 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		5BFE02252E43EDC06E0816B20FAF3CB0 /* Pods-TPFDebugTool_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TPFDebugTool_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5C6F9AD1965F042A914E38B5AFDFC6F6 /* JxbLogVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbLogVC.m; sourceTree = "<group>"; };
+		5EE8B25967EF5560DB41CBE7BA8EB8BD /* JxbHttpDetailVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpDetailVC.h; sourceTree = "<group>"; };
+		645788CA8469235876252F96C3C41F12 /* JxbCrashHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbCrashHelper.m; sourceTree = "<group>"; };
 		6618989A80F12C6A9C1F2ABB5067C6AD /* Pods-TPFDebugTool_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TPFDebugTool_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6AA705AD3B859C9DA1A9E02E423A8507 /* Pods-TPFDebugTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPFDebugTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C28DF12C0143793EF3C014698D0E996 /* YDRequestVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDRequestVC.h; sourceTree = "<group>"; };
 		6E66B4218824CF8160D93713DDBEEA82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F79372F9B2AA31ECC80442171C85EC6 /* Pods-TPFDebugTool_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPFDebugTool_Example-resources.sh"; sourceTree = "<group>"; };
-		738835F6CDB315BD56334D666CC3748E /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
-		73A64BA13D28A359394AB7B57C527CD4 /* Pods_TPFDebugTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TPFDebugTool_Tests.framework; path = "Pods-TPFDebugTool_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7060B97A181344E195DF5648AB816778 /* Pods_TPFDebugTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TPFDebugTool_Example.framework; path = "Pods-TPFDebugTool_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7217560E661BA2F18B7F3B56822847F7 /* JxbDebugVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbDebugVC.m; sourceTree = "<group>"; };
 		73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		73DA14CB9AAF46BFF54DF90D7E92B842 /* Pods-TPFDebugTool_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TPFDebugTool_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73DE4FA2FACC0CF7F47517B15CDA7B57 /* Pods-TPFDebugTool_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPFDebugTool_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		75FED1831C10AE763E806332984B1B39 /* TPFDebugTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TPFDebugTool.modulemap; sourceTree = "<group>"; };
 		7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		809246F23AD053CAAFE4513C110D2309 /* TPFDebugTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TPFDebugTool.framework; path = TPFDebugTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		84F29CD7A6A7DD1D1158A53345E8DB24 /* TPFDebugTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPFDebugTool.xcconfig; sourceTree = "<group>"; };
+		844D2413A5A817ADE4D6C6F35BF74D47 /* NSURLRequest+Identify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+Identify.h"; sourceTree = "<group>"; };
 		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
-		8C31FB72244216CF5C5AD618C3F1C0D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8834E9BEA2316D3F410EF7D32C65E9D4 /* YDJSONDisplayUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDJSONDisplayUtils.h; sourceTree = "<group>"; };
+		8844ECFE6F40218FACB0CAA6D8399B6A /* JxbHttpDatasource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpDatasource.h; sourceTree = "<group>"; };
+		8FC2BC0EDF5D5673D7AB75FE66959F74 /* JxbDebugVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbDebugVC.h; sourceTree = "<group>"; };
+		917E6C31E44C6C8C7BAC66DA95334CB7 /* YDJSONDisplayUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDJSONDisplayUtils.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93E9823D6CAF40F8E94DF7BDDBB8B078 /* NSURLSessionTask+Swizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Swizzling.m"; sourceTree = "<group>"; };
+		948EFE50045A4F6C9D06D6A38C6C5B5D /* JxbContentVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbContentVC.m; sourceTree = "<group>"; };
+		968F7C5652D8060889556207B3B7D090 /* Pods_TPFDebugTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TPFDebugTool_Tests.framework; path = "Pods-TPFDebugTool_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B119867BBDC6999C942D9875D89EB4 /* JxbBaseVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbBaseVC.m; sourceTree = "<group>"; };
+		9BEA9D763905CD0B2FC0822B3B9B1158 /* JxbDebugTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbDebugTool.h; sourceTree = "<group>"; };
 		9CBF911D98C691C96D6BFB2C40D6DD3E /* Pods-TPFDebugTool_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPFDebugTool_Tests-resources.sh"; sourceTree = "<group>"; };
+		9DC67E7134D0E236B2E63DE8BC3784B8 /* TPFDebugTool.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TPFDebugTool.bundle; path = TPFDebugTool.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10B2BA66DD49B8C680C9AA550CE3D52 /* YDRequestVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDRequestVC.m; sourceTree = "<group>"; };
 		A25E229C56C153A0761C7C257CD2B49D /* Pods-TPFDebugTool_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TPFDebugTool_Example-umbrella.h"; sourceTree = "<group>"; };
 		A27810809BAD71E4022600B21251449F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A806D9CC0356FD4C715FCD13A55A6CC6 /* YDRequestCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDRequestCell.m; sourceTree = "<group>"; };
+		A827501970D62FF32EF280FE6C55F556 /* JxbHttpDatasource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpDatasource.m; sourceTree = "<group>"; };
 		AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		ADB6355C7B8B5D0392671D65DACF4F90 /* JxbCrashVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbCrashVC.m; sourceTree = "<group>"; };
 		AF93B81285EF42B79EA6C5ACC0EB0249 /* Pods-TPFDebugTool_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPFDebugTool_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B3D979C0E6DDB542C9264347D63AB8AC /* YDHtmlDisplayUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YDHtmlDisplayUtils.m; sourceTree = "<group>"; };
 		B64CAB23CC78017144735A980BD272CC /* Pods-TPFDebugTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPFDebugTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B69BFEF07EBB762DC941EC0BC8E24EC5 /* Pods-TPFDebugTool_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TPFDebugTool_Tests.modulemap"; sourceTree = "<group>"; };
 		B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		BB7A587BF19E3DF381FC22B8D8EEAA30 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC793025F605CA9157CD6C92553D4B6F /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6D49029C3199DA51D61D879605556A /* Pods-TPFDebugTool_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TPFDebugTool_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BECD22230D10647197ED274E81E47AB7 /* JxbCrashHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbCrashHelper.h; sourceTree = "<group>"; };
 		C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C96E0C910026694102CE1CDCB98D69A6 /* JxbLogVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbLogVC.h; sourceTree = "<group>"; };
 		CBD67B87844015365FC2B8C757D97AE9 /* Pods-TPFDebugTool_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TPFDebugTool_Tests-dummy.m"; sourceTree = "<group>"; };
 		CC12BCFA3FC0B8C307F5B38C673EDD12 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		D20F32D1A240D8C64916E099E8E29BC5 /* YDRequestCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = YDRequestCell.xib; sourceTree = "<group>"; };
+		D80EA6F95487555BF9C5B792CCE174F3 /* TPFDebugTool.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPFDebugTool.xcconfig; sourceTree = "<group>"; };
+		D8B384D0B4A964A541098EAF0CBDD257 /* JxbBaseVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbBaseVC.h; sourceTree = "<group>"; };
+		D9530B045A22BA1953D1FBF9755519B4 /* YDRequestVC.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = YDRequestVC.xib; sourceTree = "<group>"; };
 		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		DA7D85A37E7659790EE484F93AE41602 /* JxbResponseVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbResponseVC.m; sourceTree = "<group>"; };
 		DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
+		DD55973238CE6CB9AE3DDF08E946FBC9 /* TPFDebugTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TPFDebugTool.modulemap; sourceTree = "<group>"; };
+		DE1CB141E5746F0F2F2FFE3BFB636CB1 /* JxbHttpProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbHttpProtocol.m; sourceTree = "<group>"; };
 		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		EE8005AD2C6103D27124F50DCA24DDFD /* TPFDebugTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPFDebugTool-umbrella.h"; sourceTree = "<group>"; };
+		EAFEA9C28CE596454AB3B1BB2EFCECA9 /* JxbContentVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbContentVC.h; sourceTree = "<group>"; };
 		EF8E0BDCDEF181CEF2C021EC28AC75A2 /* Pods-TPFDebugTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPFDebugTool_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F07CBD896158AADDDFCAAEBB20ABE811 /* Pods_TPFDebugTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TPFDebugTool_Example.framework; path = "Pods-TPFDebugTool_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCE98FC6146B9BA3B062254D0B1EF1F1 /* TPFDebugTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPFDebugTool-dummy.m"; sourceTree = "<group>"; };
+		F0C24E6C56A789E5B07DDE52A66929CA /* YDHtmlDisplayUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YDHtmlDisplayUtils.h; sourceTree = "<group>"; };
+		F57F23439CBA95D2017A974FD91357A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F87857796F1DBD8CC73242ABA1DB2234 /* JxbHttpCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JxbHttpCell.h; sourceTree = "<group>"; };
+		F9F852BA632C834C6685BBD3B907BEA1 /* JxbDebugTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JxbDebugTool.m; sourceTree = "<group>"; };
+		FC29FADF1AE0E81A7FB605C53B202765 /* TPFDebugTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TPFDebugTool.framework; path = TPFDebugTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD99115BCF37D7FCCABBF1A23EB110F2 /* NSURLResponse+Data.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+Data.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +249,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE088F11BCEAEFF24341B1AB2E4E79BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0C5BDBC796765C261F49E0D4D8DF775 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,14 +267,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09EE1ECAC344D05D35FED20000374336 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3538093DE3F106EC2C9919C1E67B84DA /* TPFDebugTool */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +289,14 @@
 			path = "../Target Support Files/FBSnapshotTestCase";
 			sourceTree = "<group>";
 		};
+		1F5778DAAB3FE66FB445B6D07D783D7A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E010E8B0CBB7F5F68D0F2EFC2562A3A1 /* TPFDebugTool */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,24 +308,98 @@
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
-		3538093DE3F106EC2C9919C1E67B84DA /* TPFDebugTool */ = {
+		2A361FF4DC21B1FB868EAB4AD4E3DCC0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				99E171B2FB635B0625190E16CCE94359 /* Support Files */,
-				8D2A07707EAB33A442EE168AEC97E307 /* TPFDebugTool */,
+				D8B384D0B4A964A541098EAF0CBDD257 /* JxbBaseVC.h */,
+				99B119867BBDC6999C942D9875D89EB4 /* JxbBaseVC.m */,
+				EAFEA9C28CE596454AB3B1BB2EFCECA9 /* JxbContentVC.h */,
+				948EFE50045A4F6C9D06D6A38C6C5B5D /* JxbContentVC.m */,
+				BECD22230D10647197ED274E81E47AB7 /* JxbCrashHelper.h */,
+				645788CA8469235876252F96C3C41F12 /* JxbCrashHelper.m */,
+				3F79A191EB80F3383F782359ABF2C6F1 /* JxbCrashVC.h */,
+				ADB6355C7B8B5D0392671D65DACF4F90 /* JxbCrashVC.m */,
+				9BEA9D763905CD0B2FC0822B3B9B1158 /* JxbDebugTool.h */,
+				F9F852BA632C834C6685BBD3B907BEA1 /* JxbDebugTool.m */,
+				8FC2BC0EDF5D5673D7AB75FE66959F74 /* JxbDebugVC.h */,
+				7217560E661BA2F18B7F3B56822847F7 /* JxbDebugVC.m */,
+				F87857796F1DBD8CC73242ABA1DB2234 /* JxbHttpCell.h */,
+				3F83C34919C2B376E9FF98196EB1AF1D /* JxbHttpCell.m */,
+				8844ECFE6F40218FACB0CAA6D8399B6A /* JxbHttpDatasource.h */,
+				A827501970D62FF32EF280FE6C55F556 /* JxbHttpDatasource.m */,
+				5EE8B25967EF5560DB41CBE7BA8EB8BD /* JxbHttpDetailVC.h */,
+				09398CC45D0ACD999518A50BB7F4CC4F /* JxbHttpDetailVC.m */,
+				453B092D0828808722A33B66A849CC53 /* JxbHttpProtocol.h */,
+				DE1CB141E5746F0F2F2FFE3BFB636CB1 /* JxbHttpProtocol.m */,
+				4800A544F1B95C8F800B75BD233CEF3D /* JxbHttpVC.h */,
+				28B04D3873BD117AAF9F4BADDDBF9412 /* JxbHttpVC.m */,
+				C96E0C910026694102CE1CDCB98D69A6 /* JxbLogVC.h */,
+				5C6F9AD1965F042A914E38B5AFDFC6F6 /* JxbLogVC.m */,
+				4014231D81B79CBB88E5DA2D224F86A7 /* JxbMemoryHelper.h */,
+				43E067D5C1A33A00980E1A2883EC0D35 /* JxbMemoryHelper.m */,
+				0326C43A74F62D0D2402702D3AEDEB9B /* JxbResponseVC.h */,
+				DA7D85A37E7659790EE484F93AE41602 /* JxbResponseVC.m */,
+				844D2413A5A817ADE4D6C6F35BF74D47 /* NSURLRequest+Identify.h */,
+				323700E39E959F0DDCD6030FBCF8BFA1 /* NSURLRequest+Identify.m */,
+				FD99115BCF37D7FCCABBF1A23EB110F2 /* NSURLResponse+Data.h */,
+				17BF21995F140154F2CADD525FDBAD27 /* NSURLResponse+Data.m */,
+				225845AC7659CDA9917F9C8E2EA5A46D /* NSURLSessionTask+Data.h */,
+				4A2DC8C50333292F80F10800A8ABAC98 /* NSURLSessionTask+Data.m */,
+				49BB127B468719517EE6B64A6B0F917E /* NSURLSessionTask+Swizzling.h */,
+				93E9823D6CAF40F8E94DF7BDDBB8B078 /* NSURLSessionTask+Swizzling.m */,
+				F0C24E6C56A789E5B07DDE52A66929CA /* YDHtmlDisplayUtils.h */,
+				B3D979C0E6DDB542C9264347D63AB8AC /* YDHtmlDisplayUtils.m */,
+				8834E9BEA2316D3F410EF7D32C65E9D4 /* YDJSONDisplayUtils.h */,
+				917E6C31E44C6C8C7BAC66DA95334CB7 /* YDJSONDisplayUtils.m */,
+				1E395346421DF9CC00DA95190E4256DD /* YDNameValueModel.h */,
+				1DC4509A4967787D4AE458600332A6A6 /* YDNameValueModel.m */,
+				287AEDEFB23AE08FF3E98A55A9F2862F /* YDRequestCell.h */,
+				A806D9CC0356FD4C715FCD13A55A6CC6 /* YDRequestCell.m */,
+				6C28DF12C0143793EF3C014698D0E996 /* YDRequestVC.h */,
+				A10B2BA66DD49B8C680C9AA550CE3D52 /* YDRequestVC.m */,
 			);
-			name = TPFDebugTool;
-			path = ../..;
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4C0BE612ECDC5FE5B7F47C067CC1BFFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC793025F605CA9157CD6C92553D4B6F /* FBSnapshotTestCase.framework */,
+				7060B97A181344E195DF5648AB816778 /* Pods_TPFDebugTool_Example.framework */,
+				968F7C5652D8060889556207B3B7D090 /* Pods_TPFDebugTool_Tests.framework */,
+				9DC67E7134D0E236B2E63DE8BC3784B8 /* TPFDebugTool.bundle */,
+				FC29FADF1AE0E81A7FB605C53B202765 /* TPFDebugTool.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62780837D2AC4B43E104835690EF4940 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D20F32D1A240D8C64916E099E8E29BC5 /* YDRequestCell.xib */,
+				D9530B045A22BA1953D1FBF9755519B4 /* YDRequestVC.xib */,
+			);
+			name = Assets;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		63439142DB39B90D748A9761BA8CD538 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBB1F1BF0A0143A50A5568DC55EA6BF5 /* TPFDebugTool */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				09EE1ECAC344D05D35FED20000374336 /* Development Pods */,
+				1F5778DAAB3FE66FB445B6D07D783D7A /* Development Pods */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
 				FBD2D672921284E66F309CA3462F84D6 /* Pods */,
-				D25B523067045877356532DCFFC79CB7 /* Products */,
+				4C0BE612ECDC5FE5B7F47C067CC1BFFD /* Products */,
 				988C96716D7FC1D553BFF5A4D15D08D8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -228,15 +413,6 @@
 				3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		8D2A07707EAB33A442EE168AEC97E307 /* TPFDebugTool */ = {
-			isa = PBXGroup;
-			children = (
-				C4CA4A55E6E3D94A4ED799E644CC1C0A /* Classes */,
-			);
-			name = TPFDebugTool;
-			path = TPFDebugTool;
 			sourceTree = "<group>";
 		};
 		9653EB3A10EE7DC50BE1674839E9CA73 /* Pods-TPFDebugTool_Example */ = {
@@ -266,15 +442,16 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		99E171B2FB635B0625190E16CCE94359 /* Support Files */ = {
+		98ECEC505BAE44DC04DC65BF21512D40 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8C31FB72244216CF5C5AD618C3F1C0D0 /* Info.plist */,
-				75FED1831C10AE763E806332984B1B39 /* TPFDebugTool.modulemap */,
-				84F29CD7A6A7DD1D1158A53345E8DB24 /* TPFDebugTool.xcconfig */,
-				FCE98FC6146B9BA3B062254D0B1EF1F1 /* TPFDebugTool-dummy.m */,
-				0EEB0EBF75A407275A9F4A1351E4FB03 /* TPFDebugTool-prefix.pch */,
-				EE8005AD2C6103D27124F50DCA24DDFD /* TPFDebugTool-umbrella.h */,
+				F57F23439CBA95D2017A974FD91357A0 /* Info.plist */,
+				49920234BE7E7FE2157C721A4A6E333F /* ResourceBundle-TPFDebugTool-Info.plist */,
+				DD55973238CE6CB9AE3DDF08E946FBC9 /* TPFDebugTool.modulemap */,
+				D80EA6F95487555BF9C5B792CCE174F3 /* TPFDebugTool.xcconfig */,
+				24F912FE9D9BD6D9369FFCA6A629EF49 /* TPFDebugTool-dummy.m */,
+				2B717F4577F4ED1CC197041F326B9011 /* TPFDebugTool-prefix.pch */,
+				48023BA4D4F97C103CF74D5BD8654A50 /* TPFDebugTool-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/TPFDebugTool";
@@ -286,6 +463,15 @@
 				D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */,
 			);
 			name = SwiftSupport;
+			sourceTree = "<group>";
+		};
+		AD30135FA46FEB3A2FC31BA9F29E6F7D /* TPFDebugTool */ = {
+			isa = PBXGroup;
+			children = (
+				2A361FF4DC21B1FB868EAB4AD4E3DCC0 /* Classes */,
+			);
+			name = TPFDebugTool;
+			path = TPFDebugTool;
 			sourceTree = "<group>";
 		};
 		BE19F7847C345C6D535B39C85F5F8219 /* Pods-TPFDebugTool_Tests */ = {
@@ -306,24 +492,15 @@
 			path = "Target Support Files/Pods-TPFDebugTool_Tests";
 			sourceTree = "<group>";
 		};
-		C4CA4A55E6E3D94A4ED799E644CC1C0A /* Classes */ = {
+		E010E8B0CBB7F5F68D0F2EFC2562A3A1 /* TPFDebugTool */ = {
 			isa = PBXGroup;
 			children = (
-				738835F6CDB315BD56334D666CC3748E /* ReplaceMe.m */,
+				63439142DB39B90D748A9761BA8CD538 /* Resources */,
+				98ECEC505BAE44DC04DC65BF21512D40 /* Support Files */,
+				AD30135FA46FEB3A2FC31BA9F29E6F7D /* TPFDebugTool */,
 			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		D25B523067045877356532DCFFC79CB7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BB7A587BF19E3DF381FC22B8D8EEAA30 /* FBSnapshotTestCase.framework */,
-				F07CBD896158AADDDFCAAEBB20ABE811 /* Pods_TPFDebugTool_Example.framework */,
-				73A64BA13D28A359394AB7B57C527CD4 /* Pods_TPFDebugTool_Tests.framework */,
-				809246F23AD053CAAFE4513C110D2309 /* TPFDebugTool.framework */,
-			);
-			name = Products;
+			name = TPFDebugTool;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		F35791481CAFDD8E7715AE1B44687328 /* Core */ = {
@@ -347,6 +524,15 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		FBB1F1BF0A0143A50A5568DC55EA6BF5 /* TPFDebugTool */ = {
+			isa = PBXGroup;
+			children = (
+				62780837D2AC4B43E104835690EF4940 /* Assets */,
+			);
+			name = TPFDebugTool;
+			path = TPFDebugTool;
+			sourceTree = "<group>";
+		};
 		FBD2D672921284E66F309CA3462F84D6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,11 +544,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0C9642C4B93D77C23CF4C83FF22C5924 /* Headers */ = {
+		8254E405B09336A7581AE0A0164E8254 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33AA437DECB78211A6F7A1A04CE61D31 /* TPFDebugTool-umbrella.h in Headers */,
+				620D33C79386B13BFEDB41D03A4E86EA /* JxbBaseVC.h in Headers */,
+				863B88059291FE14E913C6F117B8568F /* JxbContentVC.h in Headers */,
+				CFE6F293955FE1368ADB7ECAABC34E66 /* JxbCrashHelper.h in Headers */,
+				998CDDFB2C3A7A6CAF9331F37FEAD2DC /* JxbCrashVC.h in Headers */,
+				5FB89556F901091D6F09AE3797BCD177 /* JxbDebugTool.h in Headers */,
+				07748EC10524F258241BA0B37E560414 /* JxbDebugVC.h in Headers */,
+				4EECAAC12FC14E16FCEDD38F094612EF /* JxbHttpCell.h in Headers */,
+				3C2A6306DA7316555B4258E42FD5378C /* JxbHttpDatasource.h in Headers */,
+				12D985172B45241D5AC5883B6BC6F51D /* JxbHttpDetailVC.h in Headers */,
+				CF919E75EB7B165C2CCD8BAB80EB3F5E /* JxbHttpProtocol.h in Headers */,
+				6EF5D997A6BB2D56111DCE474DE87185 /* JxbHttpVC.h in Headers */,
+				B0E25F96D61D96EA54E676EFF4AECFA5 /* JxbLogVC.h in Headers */,
+				B2652C4F588484D7F5224F2D7796FBB3 /* JxbMemoryHelper.h in Headers */,
+				1C6A76673C23A43589BD08FE7543A6F9 /* JxbResponseVC.h in Headers */,
+				1DB87FAA79BD8940956600956C65BE03 /* NSURLRequest+Identify.h in Headers */,
+				FA59277369A6E59452FF2B8587547B14 /* NSURLResponse+Data.h in Headers */,
+				21954A7DB1967B3403D38D5193967AC8 /* NSURLSessionTask+Data.h in Headers */,
+				582B93F16D0DED4585B94EA368C51A3C /* NSURLSessionTask+Swizzling.h in Headers */,
+				D0F26A148003C9C8107415B08F5E372F /* TPFDebugTool-umbrella.h in Headers */,
+				3236DED7B75866442DC49F562B852156 /* YDHtmlDisplayUtils.h in Headers */,
+				63C5B83F83F704DD93C9ABD1DFE41F34 /* YDJSONDisplayUtils.h in Headers */,
+				99E855E6994E148C51DA66F7B1967079 /* YDNameValueModel.h in Headers */,
+				826497908557CA63235253E0E77DC661 /* YDRequestCell.h in Headers */,
+				4D2904457879DEF79253392FE8F76D02 /* YDRequestVC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +624,7 @@
 			);
 			name = "Pods-TPFDebugTool_Example";
 			productName = "Pods-TPFDebugTool_Example";
-			productReference = F07CBD896158AADDDFCAAEBB20ABE811 /* Pods_TPFDebugTool_Example.framework */;
+			productReference = 7060B97A181344E195DF5648AB816778 /* Pods_TPFDebugTool_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */ = {
@@ -432,24 +641,26 @@
 			);
 			name = FBSnapshotTestCase;
 			productName = FBSnapshotTestCase;
-			productReference = BB7A587BF19E3DF381FC22B8D8EEAA30 /* FBSnapshotTestCase.framework */;
+			productReference = BC793025F605CA9157CD6C92553D4B6F /* FBSnapshotTestCase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5F1B614C205C57662F8B5C76DD35D5BE /* TPFDebugTool */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18779F6D73AA08907DD0FDF1E629B152 /* Build configuration list for PBXNativeTarget "TPFDebugTool" */;
 			buildPhases = (
-				FEFB8E81333BA703D9BDE46D9BC0B48B /* Sources */,
+				A238A93DAC600C031D5498AD1F0F530C /* Sources */,
 				0A0A81ED7681A1BDB076BA03640E898D /* Frameworks */,
-				0C9642C4B93D77C23CF4C83FF22C5924 /* Headers */,
+				703C614712EACAD4D274C9B6E8B84D79 /* Resources */,
+				8254E405B09336A7581AE0A0164E8254 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2534FA296CC7E50A1067C834DC18EF24 /* PBXTargetDependency */,
 			);
 			name = TPFDebugTool;
 			productName = TPFDebugTool;
-			productReference = 809246F23AD053CAAFE4513C110D2309 /* TPFDebugTool.framework */;
+			productReference = FC29FADF1AE0E81A7FB605C53B202765 /* TPFDebugTool.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		74F9FD2C44713E425A43B0F05404D899 /* Pods-TPFDebugTool_Tests */ = {
@@ -467,8 +678,25 @@
 			);
 			name = "Pods-TPFDebugTool_Tests";
 			productName = "Pods-TPFDebugTool_Tests";
-			productReference = 73A64BA13D28A359394AB7B57C527CD4 /* Pods_TPFDebugTool_Tests.framework */;
+			productReference = 968F7C5652D8060889556207B3B7D090 /* Pods_TPFDebugTool_Tests.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		E94E77BD23974FDBB1855147DFC90BAA /* TPFDebugTool-TPFDebugTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A351654CBF87755EC72AD7213B150E /* Build configuration list for PBXNativeTarget "TPFDebugTool-TPFDebugTool" */;
+			buildPhases = (
+				5815019F23B0252B06C0052A7283D53C /* Sources */,
+				DE088F11BCEAEFF24341B1AB2E4E79BA /* Frameworks */,
+				C89731DBF51F6F20EC6047AA4AEE1E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TPFDebugTool-TPFDebugTool";
+			productName = "TPFDebugTool-TPFDebugTool";
+			productReference = 9DC67E7134D0E236B2E63DE8BC3784B8 /* TPFDebugTool.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -487,7 +715,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D25B523067045877356532DCFFC79CB7 /* Products */;
+			productRefGroup = 4C0BE612ECDC5FE5B7F47C067CC1BFFD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -495,9 +723,30 @@
 				081A2C8A3122CCC397AAF19F6AC9D0C2 /* Pods-TPFDebugTool_Example */,
 				74F9FD2C44713E425A43B0F05404D899 /* Pods-TPFDebugTool_Tests */,
 				5F1B614C205C57662F8B5C76DD35D5BE /* TPFDebugTool */,
+				E94E77BD23974FDBB1855147DFC90BAA /* TPFDebugTool-TPFDebugTool */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		703C614712EACAD4D274C9B6E8B84D79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				157782C5276E71D8D2581965B3DA6C55 /* TPFDebugTool.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C89731DBF51F6F20EC6047AA4AEE1E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EB2096FA5E3CF28AD937B5221C6602 /* YDRequestCell.xib in Resources */,
+				C76D5A10D310A00755D56D63810D8357 /* YDRequestVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		181225A5A44C089725EAD27E4204D64B /* Sources */ = {
@@ -505,6 +754,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83EE6DA3C0FABB5FA762B921818CA1E /* Pods-TPFDebugTool_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5815019F23B0252B06C0052A7283D53C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A238A93DAC600C031D5498AD1F0F530C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542975810D8154691BDD28392B6DF4C7 /* JxbBaseVC.m in Sources */,
+				1D6A2242D6EC22686B6C65B0FA2F3DD4 /* JxbContentVC.m in Sources */,
+				9F8E44A81DD961036E4DA8BA41E15721 /* JxbCrashHelper.m in Sources */,
+				CB243F4CFE1AF93F2510DF9FFEC02249 /* JxbCrashVC.m in Sources */,
+				DDC56104D048E27AEC207E41F20DBD1A /* JxbDebugTool.m in Sources */,
+				BB778AC8434F42FB94DE0270A3BFC9EE /* JxbDebugVC.m in Sources */,
+				29D078D438A95E24B77B13F74FEFA942 /* JxbHttpCell.m in Sources */,
+				4124408FD404A4A970ECF1FFAB7E9105 /* JxbHttpDatasource.m in Sources */,
+				9350E88A5CC92BC0D35ADD832B7CCAE7 /* JxbHttpDetailVC.m in Sources */,
+				47B93BBCA3329193CB1854C4D13FF6D7 /* JxbHttpProtocol.m in Sources */,
+				D63B7E952CE918881AD3068B7CA7A6D7 /* JxbHttpVC.m in Sources */,
+				03E767560D36D8E6F34486FBD662AD39 /* JxbLogVC.m in Sources */,
+				00E8D843F43F4F45AF052E3D42291AA4 /* JxbMemoryHelper.m in Sources */,
+				6E1A404639E3CA754326067F101E7065 /* JxbResponseVC.m in Sources */,
+				679426625F23FDCFADC2602E3BDAC41D /* NSURLRequest+Identify.m in Sources */,
+				2370BE8E3EE23CC6409EF75B29E3F2A9 /* NSURLResponse+Data.m in Sources */,
+				1A697176051D6B887F514AA3046AFC69 /* NSURLSessionTask+Data.m in Sources */,
+				5F1DD92B006E6B7133FDBB8086592F89 /* NSURLSessionTask+Swizzling.m in Sources */,
+				615A6B7030FBD86856E628C496DE913E /* TPFDebugTool-dummy.m in Sources */,
+				9556FDE2C407BEB874882596072642DB /* YDHtmlDisplayUtils.m in Sources */,
+				4CF1314F22DF9AF383E4F5A0149D8A17 /* YDJSONDisplayUtils.m in Sources */,
+				F97AF53F8234776837107CCDBC29C9F5 /* YDNameValueModel.m in Sources */,
+				5B5C62BCD538C246D5590337951D0596 /* YDRequestCell.m in Sources */,
+				21D2C6DCC4A9E95B99662BD8062FE679 /* YDRequestVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,18 +819,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEFB8E81333BA703D9BDE46D9BC0B48B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F868ACC8210881A5E6A628F8293593D /* ReplaceMe.m in Sources */,
-				D8B6BD10BD0FE2D5F6E47440E0AD9915 /* TPFDebugTool-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2534FA296CC7E50A1067C834DC18EF24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "TPFDebugTool-TPFDebugTool";
+			target = E94E77BD23974FDBB1855147DFC90BAA /* TPFDebugTool-TPFDebugTool */;
+			targetProxy = 36068DF7F7F48D5A83F29DA8A8016676 /* PBXContainerItemProxy */;
+		};
 		7220ADDF5F024071EDCBCDEC6D4AD97F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TPFDebugTool;
@@ -723,6 +1007,23 @@
 			};
 			name = Release;
 		};
+		750B760FC9F4A7F432755A3F3B51E461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80EA6F95487555BF9C5B792CCE174F3 /* TPFDebugTool.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TPFDebugTool";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/TPFDebugTool/ResourceBundle-TPFDebugTool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TPFDebugTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		88EFC4080AE7E5106F3601DA61AEB57A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B64CAB23CC78017144735A980BD272CC /* Pods-TPFDebugTool_Tests.release.xcconfig */;
@@ -761,6 +1062,23 @@
 			};
 			name = Release;
 		};
+		A7A524AAB4FB20B58542A95A7563B9A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80EA6F95487555BF9C5B792CCE174F3 /* TPFDebugTool.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TPFDebugTool";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/TPFDebugTool/ResourceBundle-TPFDebugTool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TPFDebugTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		BD5CB3691FE92843589F6AF6BCC8DFD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */;
@@ -798,7 +1116,7 @@
 		};
 		BD9B7472AF87B6CB1201A11B4C378685 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84F29CD7A6A7DD1D1158A53345E8DB24 /* TPFDebugTool.xcconfig */;
+			baseConfigurationReference = D80EA6F95487555BF9C5B792CCE174F3 /* TPFDebugTool.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -830,7 +1148,7 @@
 		};
 		C6D06B5A12BFBBB682758CFED286451F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84F29CD7A6A7DD1D1158A53345E8DB24 /* TPFDebugTool.xcconfig */;
+			baseConfigurationReference = D80EA6F95487555BF9C5B792CCE174F3 /* TPFDebugTool.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -968,6 +1286,15 @@
 			buildConfigurations = (
 				3D9D08C66944E3AC56E1B6A44F6C76EA /* Debug */,
 				180810ADE8A8C64DF635DB2DF56645A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92A351654CBF87755EC72AD7213B150E /* Build configuration list for PBXNativeTarget "TPFDebugTool-TPFDebugTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7A524AAB4FB20B58542A95A7563B9A1 /* Debug */,
+				750B760FC9F4A7F432755A3F3B51E461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

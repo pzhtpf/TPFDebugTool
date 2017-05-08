@@ -35,6 +35,7 @@ TODO: Add long description of the pod here.
   s.resource_bundles = {
      'TPFDebugTool' => ['TPFDebugTool/Assets/*.{storyboard,xib}']
   }
+  s.prefix_header_file = "TPFDebugTool/Classes/TPFDebugTool.pch"
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
