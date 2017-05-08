@@ -15,7 +15,7 @@
 @interface JxbResponseVC ()<UIScrollViewDelegate>
 {
     UIImageView  *img;
-
+    
 }
 @property (nonatomic, strong) NSString    *contentString;
 @property (strong, nonatomic) YDHtmlDisplayUtils  *JSONDisplayUtils;
@@ -36,13 +36,6 @@
     self.navigationItem.leftBarButtonItem = btnleft;
     
     if (!self.model.isImage) {
-      //  UIButton *btnCopy = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
-      //  btnCopy.titleLabel.font = [UIFont systemFontOfSize:13];
-     //   [btnCopy setTitle:@"Copy" forState:UIControlStateNormal];
-      //  [btnCopy addTarget:self action:@selector(copyAction) forControlEvents:UIControlEventTouchUpInside];
-      //  [btnCopy setTitleColor:[JxbDebugTool shareInstance].mainColor forState:UIControlStateNormal];
-      //  UIBarButtonItem *btnright = [[UIBarButtonItem alloc] initWithCustomView:btnCopy];
-     //   self.navigationItem.rightBarButtonItem = btnright;
         
         NSData* contentdata = self.model.responseData;
         if ([[JxbDebugTool shareInstance] isHttpResponseEncrypt]) {
@@ -54,20 +47,23 @@
         NSDictionary *dataDictionary;
         if([self.model.mineType rangeOfString:@"html"].location != NSNotFound){
             
-            _contentString = [JxbHttpDatasource prettyJSONStringFromData:contentdata error:error];
-            if(_contentString)
-            [self addWebView];
-            return;
-           
+            dataDictionary = [NSJSONSerialization JSONObjectWithData:self.model.responseData
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:&error];
+            if(!dataDictionary){
+                _contentString = [JxbHttpDatasource prettyJSONStringFromData:contentdata error:error];
+                [self addWebView];
+                return;
+            }
         }
         else if([self.model.mineType rangeOfString:@"json"].location != NSNotFound){
-       
+            
             dataDictionary = [NSJSONSerialization JSONObjectWithData:self.model.responseData
-                                                                 options:NSJSONReadingMutableContainers
-                                                                   error:&error];
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:&error];
         }
         else if([self.model.mineType rangeOfString:@"javascript"].location != NSNotFound){
-        
+            
             NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
             NSString *content = [[NSString alloc] initWithData:self.model.responseData encoding:gbkEncoding];
             NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
@@ -75,26 +71,26 @@
             
         }
         else{
-        
-             _contentString = [JxbHttpDatasource prettyJSONStringFromData:contentdata error:error];
+            
+            _contentString = [JxbHttpDatasource prettyJSONStringFromData:contentdata error:error];
         }
-       
+        
         NSMutableAttributedString *mutableAttributedString;
-         self.JSONDisplayUtils = [YDHtmlDisplayUtils new];
+        self.JSONDisplayUtils = [YDHtmlDisplayUtils new];
         if(!error){
-           
+            
             if(dataDictionary){
                 mutableAttributedString  = [self.JSONDisplayUtils handlerData:dataDictionary];
                 _contentString = mutableAttributedString.string;
             }
         }
         else{
-        
-             _contentString  = [[self.JSONDisplayUtils handlerData:error.userInfo] string];
+            
+            //             _contentString  = [[self.JSONDisplayUtils handlerData:error.userInfo] string];
+            _contentString = nil;
         }
-    
-        if(_contentString)
-            [self addWebView];
+        
+        [self addWebView];
     }
     else {
         img = [[UIImageView alloc] initWithFrame:self.view.bounds];
@@ -104,33 +100,23 @@
     }
 }
 -(void)addWebView{
-
+    
     WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:webView];
     
-    [webView loadHTMLString:_contentString baseURL:nil];
+    if(_contentString)
+        [webView loadHTMLString:_contentString baseURL:nil];
+    else{
+        [webView loadData:self.model.responseData MIMEType:self.model.mineType characterEncodingName:@"GBK" baseURL:self.model.url];
+    }
+    
 }
 - (void)copyAction {
-   // UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-   // pasteboard.string = [txt.text copy];
+    // UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    // pasteboard.string = [txt.text copy];
 }
 
 - (void)backAction {
     [self.navigationController popViewControllerAnimated:YES];
-}
-#pragma mark UIScrollViewDelegate
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
-    
-    UIView *subView = [scrollView.subviews objectAtIndex:0];
-    
-    CGFloat offsetX = MAX((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0);
-    CGFloat offsetY = MAX((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0);
-    
-    subView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX,
-                                 scrollView.contentSize.height * 0.5 + offsetY);
-}
-
-- (UIView*)viewForZoomingInScrollView:(UIScrollView *)aScrollView {
-    return  [aScrollView.subviews objectAtIndex:0];
 }
 @end
