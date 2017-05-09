@@ -9,6 +9,8 @@
 
 一个iOS 端的网络抓包工具
 
+TPFDebugTool is a debugging tool to monitor the network, view the log, collect crash log.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
