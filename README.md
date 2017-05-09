@@ -11,6 +11,15 @@
 
 TPFDebugTool is a debugging tool to monitor the network, view the log, collect crash log.
 
+## Usage
+
+ #import "JxbDebugTool.h"
+
+ [[JxbDebugTool shareInstance] setMainColor:kColorWithRGB(0xff755a)]; //设置主色调
+ [[JxbDebugTool shareInstance] enableDebugMode];//启用debug工具
+ 
+ [JxbDebugTool shareInstance].arrOnlyHosts = @[@"www.baidu.com",@"www.qq.com"];  // 设置要监听的域名
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
