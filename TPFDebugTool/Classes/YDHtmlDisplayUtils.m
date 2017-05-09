@@ -27,7 +27,7 @@
 
     NSMutableAttributedString *mutableAttributedString  = [self deliver:object placeholder:@"  "];
     
-    NSString *divString = [NSString stringWithFormat:@"<div style=\"line-height: 1.3;font-size:35px\">%@</div>",mutableAttributedString.string];
+    NSString *divString = [NSString stringWithFormat:@"<div style=\"line-height: 1.3;font-size:15px\">%@</div>",mutableAttributedString.string];
     
     return [[NSMutableAttributedString alloc] initWithString:divString];
 }
