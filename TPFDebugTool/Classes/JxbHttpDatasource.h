@@ -40,6 +40,7 @@
  */
 - (void)addHttpRequset:(JxbHttpModel*)model;
 
+- (BOOL)arrRequestContainObject:(NSString *)requestId;
 /**
  *  清空
  */

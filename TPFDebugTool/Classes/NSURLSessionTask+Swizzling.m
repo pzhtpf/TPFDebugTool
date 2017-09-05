@@ -173,7 +173,7 @@
     [self URLSession_swizzling:session task:task didCompleteWithError:error];
    
     NSURLRequest* req = task.originalRequest;
-    if (![[[JxbHttpDatasource shareInstance] arrRequest] containsObject:req.requestId])
+    if (![[JxbHttpDatasource shareInstance] arrRequestContainObject:req.requestId])
         return;
     
     NSURLResponse* resp = task.response;

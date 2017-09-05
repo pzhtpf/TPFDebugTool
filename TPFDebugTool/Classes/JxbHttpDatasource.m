@@ -44,6 +44,14 @@
         }
     }
 }
+-(BOOL)arrRequestContainObject:(NSString *)resquestId{
+    @synchronized(self.arrRequest) {
+        if (resquestId && resquestId.length > 0) {
+           return  [self.arrRequest containsObject:resquestId];
+        }
+        return NO;
+    }
+}
 -(JxbHttpModel *)getCookies:(JxbHttpModel*)model{
 
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
