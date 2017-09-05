@@ -46,8 +46,6 @@
     static dispatch_once_t  once;
     dispatch_once(&once, ^{
         tool = [[JxbDebugTool alloc] init];
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:[tool description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alertView show];
     });
     return tool;
 }
@@ -68,9 +66,6 @@
     __weak typeof (self) wSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [wSelf showOnStatusBar];
-        
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"showOnStatusBar" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alertView show];
     });
 }
 
