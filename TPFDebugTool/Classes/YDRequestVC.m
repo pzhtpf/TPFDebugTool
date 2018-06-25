@@ -16,6 +16,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UISegmentedControl *segment;
 - (IBAction)segmentValueChanged:(id)sender;
 @property (unsafe_unretained, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
 @end
 
@@ -29,6 +30,8 @@
 }
 -(void)initView{
 
+    self.topConstraint.constant = KTopBarHeight + 6.0f;
+    
     NSBundle *bundle = [NSBundle bundleForClass:[YDRequestVC class]];
     NSURL *bundleURL = [bundle URLForResource:@"TPFDebugTool" withExtension:@"bundle"];
     NSBundle *resourceBundle = [NSBundle bundleWithURL: bundleURL];
