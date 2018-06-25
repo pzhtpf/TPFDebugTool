@@ -3,6 +3,7 @@ use_frameworks!
 target 'TPFDebugTool_Example' do
   pod 'TPFDebugTool', :path => '../'
   pod 'AFNetworking'
+  pod 'Reveal-SDK','~> 2'
 
   target 'TPFDebugTool_Tests' do
     inherit! :search_paths

@@ -1,40 +1,49 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - TPFDebugTool (0.1.0)
+  - Reveal-SDK (2)
+  - TPFDebugTool (0.1.6)
 
 DEPENDENCIES:
   - AFNetworking
   - FBSnapshotTestCase
+  - Reveal-SDK (~> 2)
   - TPFDebugTool (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - FBSnapshotTestCase
+    - Reveal-SDK
 
 EXTERNAL SOURCES:
   TPFDebugTool:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  TPFDebugTool: fe2d906cc3d86e05a01604fdd1b8621579aed20f
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Reveal-SDK: 4d36a47c7091843eee525b72219e005b90bbac0b
+  TPFDebugTool: a84e677fc63671f915a56e2f68ad1349e6819512
 
-PODFILE CHECKSUM: ff585d8770191d8770c4ba4b2c7aea167507be1a
+PODFILE CHECKSUM: bc6f299ba5323057641f8ee703beb03664e78e0f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
