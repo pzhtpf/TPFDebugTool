@@ -57,18 +57,56 @@
 -(NSMutableArray *)getParams:(NSString *)parameterString{
     
     NSMutableArray *params = [NSMutableArray new];
-    NSArray *parameterArray = [parameterString componentsSeparatedByString:@"&"];
-    for (NSString *parameter in parameterArray) {
-        NSArray *tempArray = [parameter componentsSeparatedByString:@"="];
-        if(tempArray.count==2){
-            
-            YDNameValueModel *model = [YDNameValueModel new];
-            model.name = tempArray[0];
-            model.value = tempArray[1];
-            [params addObject:model];
+    
+    id jsonObject = [self getValidJSONObject:parameterString];
+    if ([NSJSONSerialization isValidJSONObject:jsonObject]) {
+        if([jsonObject isKindOfClass:[NSDictionary class]]){
+            NSDictionary *dictionary = (NSDictionary *)jsonObject;
+            NSArray *allkeys = [dictionary allKeys];
+            [allkeys enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL * _Nonnull stop) {
+                YDNameValueModel *model = [YDNameValueModel new];
+                model.name = key;
+                model.value = [dictionary valueForKey:key];
+                [params addObject:model];
+            }];
+        }
+        else if([jsonObject isKindOfClass:[NSArray class]]){
+            NSArray *array = (NSArray *)jsonObject;
+            [array enumerateObjectsUsingBlock:^(NSString *value, NSUInteger idx, BOOL * _Nonnull stop) {
+                YDNameValueModel *model = [YDNameValueModel new];
+                model.name = [NSString stringWithFormat:@"params[%d]",(int)idx];
+                model.value = value;
+                [params addObject:model];
+            }];
+        }
+        
+    } else {
+        
+        NSArray *parameterArray = [parameterString componentsSeparatedByString:@"&"];
+        for (NSString *parameter in parameterArray) {
+            NSArray *tempArray = [parameter componentsSeparatedByString:@"="];
+            if(tempArray.count==2){
+                
+                YDNameValueModel *model = [YDNameValueModel new];
+                model.name = tempArray[0];
+                model.value = tempArray[1];
+                [params addObject:model];
+            }
         }
     }
+    
+    
     return params;
+}
+-(id)getValidJSONObject:(NSString *)parameterString{
+    NSError *error;
+    NSData *data = [parameterString dataUsingEncoding:NSUTF8StringEncoding];
+    if(data){
+        id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        if ([NSJSONSerialization isValidJSONObject:jsonObject])
+            return jsonObject;
+    }
+    return nil;
 }
 -(NSMutableArray *)dictionaryToArray:(NSDictionary *)dictionary{
     
