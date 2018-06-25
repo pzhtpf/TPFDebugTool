@@ -113,15 +113,27 @@
 
         self.debugVC.viewControllers = @[nav1,nav2,nav3];
         UIViewController* vc = [[[UIApplication sharedApplication].delegate window] rootViewController];
-        UIViewController* vc2 = vc.presentedViewController;
-        [vc2?:vc presentViewController:self.debugVC animated:YES completion:nil];
+        UIViewController* vc2 = [self getVisibleViewControllerFrom:vc];
+        [vc2 presentViewController:self.debugVC animated:YES completion:nil];
     }
     else {
         [self.debugVC dismissViewControllerAnimated:YES completion:nil];
         self.debugVC = nil;
     }
 }
-
+-(UIViewController *) getVisibleViewControllerFrom:(UIViewController *) vc {
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        return [self getVisibleViewControllerFrom:[((UINavigationController *) vc) visibleViewController]];
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        return [self getVisibleViewControllerFrom:[((UITabBarController *) vc) selectedViewController]];
+    } else {
+        if (vc.presentedViewController) {
+            return [self getVisibleViewControllerFrom:vc.presentedViewController];
+        } else {
+            return vc;
+        }
+    }
+}
 - (void)timerMonitor {
     unsigned long long used = [JxbMemoryHelper bytesOfUsedMemory];
     NSString* text = [self number2String:used];
