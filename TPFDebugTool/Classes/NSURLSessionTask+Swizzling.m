@@ -13,6 +13,7 @@
 #import "NSURLRequest+Identify.h"
 #import "NSURLResponse+Data.h"
 #import "NSURLSessionTask+Data.h"
+#import <Aspects/Aspects.h>
 
 @class NSURLSession;
 
@@ -80,46 +81,25 @@
 
 + (void)swizzling_TaskDidSendBodyDataIntoDelegateClass:(Class)cls {
     SEL selector = @selector(URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:);
-    SEL swizzledSelector = @selector(URLSession_swizzling:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:);
-    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
+//    SEL swizzledSelector = @selector(URLSession_swizzling:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:);
+//    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
+//    
+//    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
+//    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
+
+    NSError *error;
     
-    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
+    [cls aspect_hookSelector:selector
+                              withOptions:AspectPositionBefore
+                               usingBlock:^(id <AspectInfo> aspectInfo,NSURLSession *session,NSURLSessionTask *task){                                   
+                                   
+                                   [self addRequestModel:session task:task];
+                                  
+                               }
+                                    error:&error];
 }
-
-+ (void)swizzling_TaskDidReceiveChallengeIntoDelegateClass:(Class)cls {
-    SEL selector = @selector(URLSession:task:didReceiveChallenge:completionHandler:);
-    SEL swizzledSelector = @selector(URLSession_swizzling:task:didReceiveChallenge:completionHandler:);
-    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
++(void)addRequestModel:(NSURLSession *)session task:(NSURLSessionTask *)task {
     
-    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
-}
-
-+ (void)swizzling_TaskNeedNewBodyStreamIntoDelegateClass:(Class)cls {
-    SEL selector = @selector(URLSession_swizzling:task:needNewBodyStream:);
-    SEL swizzledSelector = @selector(URLSession_swizzling:task:needNewBodyStream:);
-    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
-    
-    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
-}
-
-+ (void)swizzling_TaskDidCompleteWithErrorIntoDelegateClass:(Class)cls {
-    SEL selector = @selector(URLSession:task:didCompleteWithError:);
-    SEL swizzledSelector = @selector(URLSession_swizzling:task:didCompleteWithError:);
-    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
-    
-    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
-}
-
-#pragma mark - NSURLSession task delegate
-- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task willPerformHTTPRedirection:(NSHTTPURLResponse *)response newRequest:(NSURLRequest *)request completionHandler:(void (^)(NSURLRequest * __nullable))completionHandler {
-    [self URLSession_swizzling:session task:task willPerformHTTPRedirection:response newRequest:request completionHandler:completionHandler];
-}
-
-- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
     NSURLRequest* req = task.originalRequest;
     req.requestId = [[NSUUID UUID] UUIDString];
     req.startTime = @([[NSDate date] timeIntervalSince1970]);
@@ -136,7 +116,7 @@
         }
     }
     if (!canHandle)
-    return;
+        return;
     
     JxbHttpModel* model = [[JxbHttpModel alloc] init];
     model.requestId = req.requestId;
@@ -158,7 +138,54 @@
     [[JxbHttpDatasource shareInstance] addHttpRequset:model];
     [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyKeyReloadHttp object:nil];
     
-    [self URLSession_swizzling:session task:task didSendBodyData:bytesSent totalBytesSent:totalBytesSent totalBytesExpectedToSend:totalBytesExpectedToSend];
+}
++ (void)swizzling_TaskDidReceiveChallengeIntoDelegateClass:(Class)cls {
+    SEL selector = @selector(URLSession:task:didReceiveChallenge:completionHandler:);
+    SEL swizzledSelector = @selector(URLSession_swizzling:task:didReceiveChallenge:completionHandler:);
+    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
+    
+    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
+    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
+}
+
++ (void)swizzling_TaskNeedNewBodyStreamIntoDelegateClass:(Class)cls {
+    SEL selector = @selector(URLSession_swizzling:task:needNewBodyStream:);
+    SEL swizzledSelector = @selector(URLSession_swizzling:task:needNewBodyStream:);
+    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
+    
+    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
+    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
+}
+
++ (void)swizzling_TaskDidCompleteWithErrorIntoDelegateClass:(Class)cls {
+    SEL selector = @selector(URLSession:task:didCompleteWithError:);
+//    SEL swizzledSelector = @selector(URLSession_swizzling:task:didCompleteWithError:);
+//    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
+//
+//    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
+//    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
+    
+    NSError *error;
+    
+    [cls aspect_hookSelector:selector
+                 withOptions:AspectPositionAfter
+                  usingBlock:^(id <AspectInfo> aspectInfo,NSURLSession *session,NSURLSessionTask *task ,NSError *error ){
+                      
+                      [self URLSession_swizzling:session task:task didCompleteWithError:error];
+                      
+                  }
+                       error:&error];
+}
+
+#pragma mark - NSURLSession task delegate
+- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task willPerformHTTPRedirection:(NSHTTPURLResponse *)response newRequest:(NSURLRequest *)request completionHandler:(void (^)(NSURLRequest * __nullable))completionHandler {
+    [self URLSession_swizzling:session task:task willPerformHTTPRedirection:response newRequest:request completionHandler:completionHandler];
+}
+
+- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
+   
+    
+//    [self URLSession_swizzling:session task:task didSendBodyData:bytesSent totalBytesSent:totalBytesSent totalBytesExpectedToSend:totalBytesExpectedToSend];
 }
 
 - (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * __nullable credential))completionHandler {
@@ -169,8 +196,8 @@
     [self URLSession_swizzling:session task:task needNewBodyStream:completionHandler];
 }
 
-- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error {
-    [self URLSession_swizzling:session task:task didCompleteWithError:error];
++(void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error {
+//    [self URLSession_swizzling:session task:task didCompleteWithError:error];
    
     NSURLRequest* req = task.originalRequest;
     if (![[JxbHttpDatasource shareInstance] arrRequestContainObject:req.requestId])

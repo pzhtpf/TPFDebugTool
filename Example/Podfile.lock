@@ -14,13 +14,15 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - Reveal-SDK (2)
-  - TPFDebugTool (0.1.6)
+  - TPFDebugTool (0.1.7):
+    - Aspects (~> 1.4.1)
 
 DEPENDENCIES:
   - AFNetworking
@@ -31,6 +33,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Aspects
     - FBSnapshotTestCase
     - Reveal-SDK
 
@@ -40,9 +43,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Reveal-SDK: 4d36a47c7091843eee525b72219e005b90bbac0b
-  TPFDebugTool: a84e677fc63671f915a56e2f68ad1349e6819512
+  TPFDebugTool: d4fb5168574493ca22100fa2fb61c3c739727ab8
 
 PODFILE CHECKSUM: bc6f299ba5323057641f8ee703beb03664e78e0f
 
