@@ -23,14 +23,6 @@
     [super viewDidLoad];
     [self.navigationItem setTitle:@"Crash"];
     
-    UIButton *btnclose = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
-    btnclose.titleLabel.font = [UIFont systemFontOfSize:13];
-    [btnclose setTitle:@"关闭" forState:UIControlStateNormal];
-    [btnclose addTarget:self action:@selector(dismissViewController) forControlEvents:UIControlEventTouchUpInside];
-    [btnclose setTitleColor:[JxbDebugTool shareInstance].mainColor forState:UIControlStateNormal];
-    
-    UIBarButtonItem *btnleft = [[UIBarButtonItem alloc] initWithCustomView:btnclose];
-    self.navigationItem.leftBarButtonItem = btnleft;
     
     self.listData = [[JxbCrashHelper sharedInstance] crashLogs];
     
@@ -43,7 +35,23 @@
     [self.view addSubview:self.tableView];
     
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self setLeftBarButtonItem];
+    });
+}
+-(void)setLeftBarButtonItem{
+    
+    UIButton *btnclose = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    btnclose.titleLabel.font = [UIFont systemFontOfSize:13];
+    [btnclose setTitle:@"关闭" forState:UIControlStateNormal];
+    [btnclose addTarget:self action:@selector(dismissViewController) forControlEvents:UIControlEventTouchUpInside];
+    [btnclose setTitleColor:[JxbDebugTool shareInstance].mainColor forState:UIControlStateNormal];
+    
+    UIBarButtonItem *btnleft = [[UIBarButtonItem alloc] initWithCustomView:btnclose];
+    self.navigationItem.leftBarButtonItem = btnleft;
+}
 - (void)dismissViewController {
 //    [self dismissViewControllerAnimated:YES completion:nil];
       [[JxbDebugTool shareInstance] showDebug];

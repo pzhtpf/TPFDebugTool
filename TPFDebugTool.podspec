@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TPFDebugTool'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'TPFDebugTool is a debugging tool to monitor the network, view the log, collect crash log'
 
 # This description is used to generate tags and improve search results.
