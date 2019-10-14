@@ -21,50 +21,63 @@
 
 + (void)load {
     
-    Method oriMethod = class_getInstanceMethod([NSURLSession class], @selector(dataTaskWithRequest:));
-    Method newMethod = class_getInstanceMethod([NSURLSession class], @selector(dataTaskWithRequest_swizzling:));
-    method_exchangeImplementations(oriMethod, newMethod);
-    
-    const SEL selectors_data[] = {
-        @selector(URLSession:dataTask:didReceiveResponse:completionHandler:),
-        @selector(URLSession:dataTask:didBecomeDownloadTask:),
-        @selector(URLSession:dataTask:didBecomeStreamTask:),
-        @selector(URLSession:dataTask:didReceiveData:),
-        @selector(URLSession:dataTask:willCacheResponse:completionHandler:)
-    };
-    
-    const int numSelectors_data = sizeof(selectors_data) / sizeof(SEL);
-    
-    Class *classes = NULL;
-    int numClasses = objc_getClassList(NULL, 0);
-    classes = (__unsafe_unretained Class *)malloc(sizeof(Class) * numClasses);
-    numClasses = objc_getClassList(classes, numClasses);
-    for (NSInteger classIndex = 0; classIndex < numClasses; ++classIndex) {
-        Class class = classes[classIndex];
-        
-        unsigned int methodCount = 0;
-        Method *methods = class_copyMethodList(class, &methodCount);
-        BOOL matchingSelectorFound = NO;
-        for (unsigned int methodIndex = 0; methodIndex < methodCount; methodIndex++) {
-            for (int selectorIndex = 0; selectorIndex < numSelectors_data; ++selectorIndex) {
-                if (method_getName(methods[methodIndex]) == selectors_data[selectorIndex]) {
-                    [self swizzling_selectors_task:class];
-                    [self swizzling_selectors_data:class];
-                    matchingSelectorFound = YES;
-                    break;
+    // Only allow swizzling once.
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // Swizzle any classes that implement one of these selectors.
+        const SEL selectors[] = {
+            @selector(URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:),
+            @selector(URLSession:dataTask:didReceiveData:),
+            @selector(URLSession:dataTask:didReceiveResponse:completionHandler:),
+            @selector(URLSession:task:didCompleteWithError:),
+            @selector(URLSession:dataTask:didBecomeDownloadTask:),
+            @selector(URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:),
+            @selector(URLSession:downloadTask:didFinishDownloadingToURL:)
+        };
+
+        const int numSelectors = sizeof(selectors) / sizeof(SEL);
+
+        Class *classes = NULL;
+        int numClasses = objc_getClassList(NULL, 0);
+
+        if (numClasses > 0) {
+            classes = (__unsafe_unretained Class *)malloc(sizeof(Class) * numClasses);
+            numClasses = objc_getClassList(classes, numClasses);
+            for (NSInteger classIndex = 0; classIndex < numClasses; ++classIndex) {
+                Class class = classes[classIndex];
+
+                // Use the runtime API rather than the methods on NSObject to avoid sending messages to
+                // classes we're not interested in swizzling. Otherwise we hit +initialize on all classes.
+                // NOTE: calling class_getInstanceMethod() DOES send +initialize to the class. That's why we iterate through the method list.
+                unsigned int methodCount = 0;
+                Method *methods = class_copyMethodList(class, &methodCount);
+                BOOL matchingSelectorFound = NO;
+                for (unsigned int methodIndex = 0; methodIndex < methodCount; methodIndex++) {
+                    for (int selectorIndex = 0; selectorIndex < numSelectors; ++selectorIndex) {
+                        if (method_getName(methods[methodIndex]) == selectors[selectorIndex]) {
+                            [self swizzling_selectors_task:class];
+                            matchingSelectorFound = YES;
+                            break;
+                        }
+                    }
+                    if (matchingSelectorFound) {
+                        break;
+                    }
                 }
+                free(methods);
             }
-            if (matchingSelectorFound) {
-                break;
-            }
+            
+            free(classes);
         }
-    }
+
+    });
 }
 
 #pragma mark - NSURLSession task delegate with swizzling
 + (void)swizzling_selectors_task:(Class)cls {
     [self swizzling_TaskWillPerformHTTPRedirectionIntoDelegateClass:cls];
     [self swizzling_TaskDidSendBodyDataIntoDelegateClass:cls];
+    [self swizzling_TaskDidReceiveDataIntoDelegateClass:cls];
     [self swizzling_TaskDidReceiveChallengeIntoDelegateClass:cls];
     [self swizzling_TaskNeedNewBodyStreamIntoDelegateClass:cls];
     [self swizzling_TaskDidCompleteWithErrorIntoDelegateClass:cls];
@@ -81,75 +94,12 @@
 
 + (void)swizzling_TaskDidSendBodyDataIntoDelegateClass:(Class)cls {
     SEL selector = @selector(URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:);
-    //    SEL swizzledSelector = @selector(URLSession_swizzling:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:);
-    //    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
-    //
-    //    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    //    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
+    SEL swizzledSelector = @selector(URLSession_swizzling:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:);
+    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
+
+    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
+    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
     
-    NSError *error;
-    
-    [cls aspect_hookSelector:selector
-                 withOptions:AspectPositionBefore
-                  usingBlock:^(id <AspectInfo> aspectInfo,NSURLSession *session,NSURLSessionTask *task){
-                      
-                      [self addRequestModel:session task:task];
-                      
-                  }
-                       error:&error];
-    
-}
-+(void)addRequestModel:(NSURLSession *)session task:(NSURLSessionTask *)task {
-    
-    NSURLRequest* req = task.originalRequest;
-    
-    if ([[JxbHttpDatasource shareInstance] arrRequestContainObject:req.requestId])
-        return;
-    
-    if (![self canHandle:req])
-        return;
-    
-    [self createModel:req statusCode:@"100"];
-    
-}
-+(BOOL)canHandle:(NSURLRequest *)req{
-    BOOL canHandle = YES;
-    if ([[JxbDebugTool shareInstance] arrOnlyHosts].count > 0) {
-        canHandle = NO;
-        NSString* url = [req.URL.absoluteString lowercaseString];
-        for (NSString* _url in [JxbDebugTool shareInstance].arrOnlyHosts) {
-            if ([url rangeOfString:[_url lowercaseString]].location != NSNotFound) {
-                canHandle = YES;
-                break;
-            }
-        }
-    }
-    return canHandle;
-}
-+(void)createModel:(NSURLRequest *)req statusCode:(NSString *)statusCode{
-    
-    req.requestId = [[NSUUID UUID] UUIDString];
-    req.startTime = @([[NSDate date] timeIntervalSince1970]);
-    
-    JxbHttpModel* model = [[JxbHttpModel alloc] init];
-    model.requestId = req.requestId;
-    model.url = req.URL;
-    model.method = req.HTTPMethod;
-    model.requestAllHTTPHeaderFields = req.allHTTPHeaderFields;
-    model.startTime = [NSString stringWithFormat:@"%fs",req.startTime.doubleValue];
-    model.statusCode = statusCode;
-    if (req.HTTPBody) {
-        NSData* data = req.HTTPBody;
-        if ([[JxbDebugTool shareInstance] isHttpRequestEncrypt]) {
-            if ([[JxbDebugTool shareInstance] delegate] && [[JxbDebugTool shareInstance].delegate respondsToSelector:@selector(decryptJson:)]) {
-                data = [[JxbDebugTool shareInstance].delegate decryptJson:req.HTTPBody];
-            }
-        }
-        model.requestBody = [JxbHttpDatasource prettyJSONStringFromData:data error:nil];
-    }
-    
-    [[JxbHttpDatasource shareInstance] addHttpRequset:model];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyKeyReloadHttp object:nil];
 }
 + (void)swizzling_TaskDidReceiveChallengeIntoDelegateClass:(Class)cls {
     SEL selector = @selector(URLSession:task:didReceiveChallenge:completionHandler:);
@@ -168,126 +118,6 @@
     struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
     [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
 }
-
-+ (void)swizzling_TaskDidCompleteWithErrorIntoDelegateClass:(Class)cls {
-    SEL selector = @selector(URLSession:task:didCompleteWithError:);
-    //    SEL swizzledSelector = @selector(URLSession_swizzling:task:didCompleteWithError:);
-    //    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
-    //
-    //    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    //    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
-    
-    NSError *error;
-    
-    [cls aspect_hookSelector:selector
-                 withOptions:AspectPositionAfter
-                  usingBlock:^(id <AspectInfo> aspectInfo,NSURLSession *session,NSURLSessionTask *task ,NSError *error ){
-                      
-                      [self URLSession_swizzling:session task:task didCompleteWithError:error];
-                      
-                  }
-                       error:&error];
-}
-
-#pragma mark - NSURLSession task delegate
-- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task willPerformHTTPRedirection:(NSHTTPURLResponse *)response newRequest:(NSURLRequest *)request completionHandler:(void (^)(NSURLRequest * __nullable))completionHandler {
-    [self URLSession_swizzling:session task:task willPerformHTTPRedirection:response newRequest:request completionHandler:completionHandler];
-}
-
-- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
-    
-    
-    //    [self URLSession_swizzling:session task:task didSendBodyData:bytesSent totalBytesSent:totalBytesSent totalBytesExpectedToSend:totalBytesExpectedToSend];
-}
-
-- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * __nullable credential))completionHandler {
-    [self URLSession_swizzling:session task:task didReceiveChallenge:challenge completionHandler:completionHandler];
-}
-
-- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task needNewBodyStream:(void (^)(NSInputStream * __nullable bodyStream))completionHandler {
-    [self URLSession_swizzling:session task:task needNewBodyStream:completionHandler];
-}
-
-+(void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error {
-    //    [self URLSession_swizzling:session task:task didCompleteWithError:error];
-    
-    NSURLRequest* req = task.originalRequest;
-    NSURLResponse* resp = task.response;
-    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)resp;
-    NSString *statusCode = [NSString stringWithFormat:@"%d",(int)httpResponse.statusCode];
-    
-    if ([[JxbHttpDatasource shareInstance] arrRequestContainObject:req.requestId]){
-        
-        __block JxbHttpModel* model;
-        NSMutableArray *httpArray = [[[JxbHttpDatasource shareInstance] httpArray] mutableCopy];
-        [httpArray enumerateObjectsUsingBlock:^(JxbHttpModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            
-            if([obj.requestId isEqualToString:req.requestId]){
-                model = obj;
-                *stop = YES;
-            }
-        }];
-        
-        model.statusCode = statusCode;
-        model.responseData = task.responseDatas;
-        model.responseAllHTTPHeaderFields = httpResponse.allHeaderFields;
-        model.mineType = httpResponse.MIMEType;
-        model.isImage = [resp.MIMEType rangeOfString:@"image"].location != NSNotFound;
-        model.totalDuration = [NSString stringWithFormat:@"%fs",[[NSDate date] timeIntervalSince1970] - model.startTime.doubleValue];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyKeyReloadHttp object:model];
-    }
-    else if ([self canHandle:req]){
-        
-        JxbHttpModel* model = [[JxbHttpModel alloc] init];
-        model.requestId = req.requestId;
-        model.url = req.URL;
-        model.method = req.HTTPMethod;
-        model.requestAllHTTPHeaderFields = req.allHTTPHeaderFields;
-        model.startTime = [NSString stringWithFormat:@"%fs",[[NSDate date] timeIntervalSince1970]];
-        model.statusCode = statusCode;
-        if (req.HTTPBody) {
-            NSData* data = req.HTTPBody;
-            if ([[JxbDebugTool shareInstance] isHttpRequestEncrypt]) {
-                if ([[JxbDebugTool shareInstance] delegate] && [[JxbDebugTool shareInstance].delegate respondsToSelector:@selector(decryptJson:)]) {
-                    data = [[JxbDebugTool shareInstance].delegate decryptJson:req.HTTPBody];
-                }
-            }
-            model.requestBody = [JxbHttpDatasource prettyJSONStringFromData:data error:nil];
-        }
-        
-        model.responseData = task.responseDatas;
-        model.responseAllHTTPHeaderFields = httpResponse.allHeaderFields;
-        model.mineType = httpResponse.MIMEType;
-        model.isImage = [resp.MIMEType rangeOfString:@"image"].location != NSNotFound;
-        model.totalDuration = [NSString stringWithFormat:@"%fs",[[NSDate date] timeIntervalSince1970] - model.startTime.doubleValue];
-        
-        
-        [[JxbHttpDatasource shareInstance] addHttpRequset:model];
-        [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyKeyReloadHttp object:nil];
-    }
-    
-}
-
-
-#pragma mark - NSUrlSession data delegate with swizzling
-+ (void)swizzling_selectors_data:(Class)cls {
-    [self swizzling_TaskDidReceiveResponseIntoDelegateClass:cls];
-    [self swizzling_TaskDidReceiveDataIntoDelegateClass:cls];
-    [self swizzling_TaskDidBecomeDownloadTaskIntoDelegateClass:cls];
-    [self swizzling_TaskDidBecomeStreamTaskIntoDelegateClass:cls];
-    //    [self swizzling_TaskWillCacheResponseIntoDelegateClass:cls];
-}
-
-+ (void)swizzling_TaskDidReceiveResponseIntoDelegateClass:(Class)cls {
-    SEL selector = @selector(URLSession:dataTask:didReceiveResponse:completionHandler:);
-    SEL swizzledSelector = @selector(URLSession_swizzling:dataTask:didReceiveResponse:completionHandler:);
-    Protocol *protocol = @protocol(NSURLSessionDataDelegate);
-    
-    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
-}
-
 + (void)swizzling_TaskDidReceiveDataIntoDelegateClass:(Class)cls {
     SEL selector = @selector(URLSession:dataTask:didReceiveData:);
     SEL swizzledSelector = @selector(URLSession_swizzling:dataTask:didReceiveData:);
@@ -296,31 +126,77 @@
     struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
     [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
 }
++ (void)swizzling_TaskDidCompleteWithErrorIntoDelegateClass:(Class)cls {
+    SEL selector = @selector(URLSession:task:didCompleteWithError:);
+    SEL swizzledSelector = @selector(URLSession_swizzling:task:didCompleteWithError:);
+    Protocol *protocol = @protocol(NSURLSessionTaskDelegate);
 
-+ (void)swizzling_TaskDidBecomeDownloadTaskIntoDelegateClass:(Class)cls {
-    SEL selector = @selector(URLSession:dataTask:didBecomeDownloadTask:);
-    SEL swizzledSelector = @selector(URLSession_swizzling:dataTask:didBecomeDownloadTask:);
-    Protocol *protocol = @protocol(NSURLSessionDataDelegate);
-    
     struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
     [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
-}
-+ (void)swizzling_TaskDidBecomeStreamTaskIntoDelegateClass:(Class)cls {
-    SEL selector = @selector(URLSession:dataTask:didBecomeStreamTask:);
-    SEL swizzledSelector = @selector(URLSession_swizzling:dataTask:didBecomeStreamTask:);
-    Protocol *protocol = @protocol(NSURLSessionDataDelegate);
-    
-    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
+
 }
 
-+ (void)swizzling_TaskWillCacheResponseIntoDelegateClass:(Class)cls {
-    SEL selector = @selector(URLSession:dataTask:willCacheResponse:completionHandler:);
-    SEL swizzledSelector = @selector(URLSession_swizzling:dataTask:willCacheResponse:completionHandler:);
-    Protocol *protocol = @protocol(NSURLSessionDataDelegate);
+#pragma mark - NSURLSession task delegate
+- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task willPerformHTTPRedirection:(NSHTTPURLResponse *)response newRequest:(NSURLRequest *)request completionHandler:(void (^)(NSURLRequest * __nullable))completionHandler {
+    [self URLSession_swizzling:session task:task willPerformHTTPRedirection:response newRequest:request completionHandler:completionHandler];
+}
+
+-(void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
     
-    struct objc_method_description methodDescription = protocol_getMethodDescription(protocol, selector, NO, YES);
-    [self replaceImplementationOfSelector:selector withSelector:swizzledSelector forClass:cls withMethodDescription:methodDescription];
+    [self URLSession_swizzling:session task:task didSendBodyData:bytesSent totalBytesSent:totalBytesSent totalBytesExpectedToSend:totalBytesExpectedToSend];
+
+    
+    NSURLRequest* req = task.originalRequest;
+    if ([[JxbHttpDatasource shareInstance] arrRequestContainObject:req.requestId])
+         return;
+
+   BOOL canHandle = YES;
+   if ([[JxbDebugTool shareInstance] arrOnlyHosts].count > 0) {
+       canHandle = NO;
+       NSString* url = [req.URL.absoluteString lowercaseString];
+       for (NSString* _url in [JxbDebugTool shareInstance].arrOnlyHosts) {
+           if ([url rangeOfString:[_url lowercaseString]].location != NSNotFound) {
+               canHandle = YES;
+               break;
+           }
+       }
+   }
+
+  if(!canHandle)
+      return;
+
+
+    req.requestId = [[NSUUID UUID] UUIDString];
+    req.startTime = @([[NSDate date] timeIntervalSince1970]);
+
+   JxbHttpModel* model = [[JxbHttpModel alloc] init];
+   model.requestId = req.requestId;
+   model.url = req.URL;
+   model.method = req.HTTPMethod;
+   model.requestAllHTTPHeaderFields = req.allHTTPHeaderFields;
+   model.startTime = [NSString stringWithFormat:@"%fs",req.startTime.doubleValue];
+   model.statusCode = @"100";
+   if (req.HTTPBody) {
+       NSData* data = req.HTTPBody;
+       if ([[JxbDebugTool shareInstance] isHttpRequestEncrypt]) {
+           if ([[JxbDebugTool shareInstance] delegate] && [[JxbDebugTool shareInstance].delegate respondsToSelector:@selector(decryptJson:)]) {
+               data = [[JxbDebugTool shareInstance].delegate decryptJson:req.HTTPBody];
+           }
+       }
+       model.requestBody = [JxbHttpDatasource prettyJSONStringFromData:data error:nil];
+   }
+
+   [[JxbHttpDatasource shareInstance] addHttpRequset:model];
+   [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyKeyReloadHttp object:nil];
+     
+}
+
+- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * __nullable credential))completionHandler {
+    [self URLSession_swizzling:session task:task didReceiveChallenge:challenge completionHandler:completionHandler];
+}
+
+- (void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)task needNewBodyStream:(void (^)(NSInputStream * __nullable bodyStream))completionHandler {
+    [self URLSession_swizzling:session task:task needNewBodyStream:completionHandler];
 }
 
 + (void)replaceImplementationOfSelector:(SEL)selector withSelector:(SEL)swizzledSelector forClass:(Class)cls withMethodDescription:(struct objc_method_description)methodDescription
@@ -332,17 +208,42 @@
         Method newMethod = class_getInstanceMethod(cls, swizzledSelector);
         method_exchangeImplementations(oldMethod, newMethod);
     } else {    // 没有实例方法的话，就不要添加
-        //        class_addMethod(cls, selector, implementation, methodDescription.types);
+        class_addMethod(cls, selector, implementation, methodDescription.types);
     }
 }
 
 
 #pragma mark - NSUrlSession delegate
-- (NSURLSessionDataTask *)dataTaskWithRequest_swizzling:(NSURLRequest *)request {
-    return [self dataTaskWithRequest_swizzling:request];
-}
 
 - (void)URLSession_swizzling:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler {
+    
+       NSURLRequest* req = dataTask.originalRequest;
+       NSURLResponse* resp = dataTask.response;
+       NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)resp;
+       NSString *statusCode = [NSString stringWithFormat:@"%d",(int)httpResponse.statusCode];
+       
+       if ([[JxbHttpDatasource shareInstance] arrRequestContainObject:req.requestId]){
+           
+           __block JxbHttpModel* model;
+           NSMutableArray *httpArray = [[[JxbHttpDatasource shareInstance] httpArray] mutableCopy];
+           [httpArray enumerateObjectsUsingBlock:^(JxbHttpModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+               
+               if([obj.requestId isEqualToString:req.requestId]){
+                   model = obj;
+                   *stop = YES;
+               }
+           }];
+           
+           model.statusCode = statusCode;
+           model.responseData = dataTask.responseDatas;
+           model.responseAllHTTPHeaderFields = httpResponse.allHeaderFields;
+           model.mineType = httpResponse.MIMEType;
+           model.isImage = [resp.MIMEType rangeOfString:@"image"].location != NSNotFound;
+           model.totalDuration = [NSString stringWithFormat:@"%fs",[[NSDate date] timeIntervalSince1970] - model.startTime.doubleValue];
+           
+           [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyKeyReloadHttp object:model];
+       }
+    
     [self URLSession_swizzling:session dataTask:dataTask didReceiveResponse:response completionHandler:completionHandler];
 }
 
@@ -361,13 +262,39 @@
     [self URLSession_swizzling:session dataTask:dataTask didBecomeDownloadTask:downloadTask];
 }
 
-- (void)URLSession_swizzling:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeStreamTask:(NSURLSessionStreamTask *)streamTask {
-    [self URLSession_swizzling:session dataTask:dataTask didBecomeStreamTask:streamTask];
+-(void)URLSession_swizzling:(NSURLSession *)session task:(NSURLSessionTask *)dataTask didCompleteWithError:(nullable NSError *)error {
+    
+      NSURLRequest* req = dataTask.originalRequest;
+      NSURLResponse* resp = dataTask.response;
+      NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)resp;
+      NSString *statusCode = [NSString stringWithFormat:@"%d",(int)httpResponse.statusCode];
+    
+      NSString *requestId = req.requestId;
+      NSLog(@"结束请求:%@",requestId);
+      
+      if ([[JxbHttpDatasource shareInstance] arrRequestContainObject:req.requestId]){
+          
+          __block JxbHttpModel* model;
+          NSMutableArray *httpArray = [[[JxbHttpDatasource shareInstance] httpArray] mutableCopy];
+          [httpArray enumerateObjectsUsingBlock:^(JxbHttpModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+              
+              if([obj.requestId isEqualToString:req.requestId]){
+                  model = obj;
+                  *stop = YES;
+              }
+          }];
+          
+          model.statusCode = statusCode;
+          model.responseData = dataTask.responseDatas;
+          model.responseAllHTTPHeaderFields = httpResponse.allHeaderFields;
+          model.mineType = httpResponse.MIMEType;
+          model.isImage = [resp.MIMEType rangeOfString:@"image"].location != NSNotFound;
+          model.totalDuration = [NSString stringWithFormat:@"%fs",[[NSDate date] timeIntervalSince1970] - model.startTime.doubleValue];
+          
+          [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyKeyReloadHttp object:model];
+      }
+    
+    [self URLSession_swizzling:session task:dataTask didCompleteWithError:error];
 }
-
-- (void)URLSession_swizzling:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask willCacheResponse:(NSCachedURLResponse *)proposedResponse completionHandler:(void (^)(NSCachedURLResponse * __nullable cachedResponse))completionHandler {
-    [self URLSession_swizzling:session dataTask:dataTask willCacheResponse:proposedResponse completionHandler:completionHandler];
-}
-
 
 @end

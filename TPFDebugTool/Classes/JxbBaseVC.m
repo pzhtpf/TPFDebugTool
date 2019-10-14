@@ -15,7 +15,7 @@
 @implementation JxbBaseVC
 
 - (void)dealloc {
-    NSLog(@"%@ dealloc",[self class]);
+//    NSLog(@"%@ dealloc",[self class]);
 }
 
 - (void)viewDidLoad {

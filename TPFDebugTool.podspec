@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TPFDebugTool'
-  s.version          = '0.1.8'
+  s.version          = '0.2.0'
   s.summary          = 'TPFDebugTool is a debugging tool to monitor the network, view the log, collect crash log'
 
 # This description is used to generate tags and improve search results.
@@ -37,5 +37,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Aspects', '~> 1.4.1'
+#  s.dependency 'Aspects', '~> 1.4.1'
 end

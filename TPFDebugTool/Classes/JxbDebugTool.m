@@ -54,7 +54,7 @@
     self = [super init];
     if (self) {
         self.mainColor = [UIColor redColor];
-        self.debugWin = [[JxbDebugWindow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
+        self.debugWin = [[JxbDebugWindow alloc] initWithFrame:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 20)];
     }
     return self;
 }
@@ -137,9 +137,36 @@
 - (void)timerMonitor {
     unsigned long long used = [JxbMemoryHelper bytesOfUsedMemory];
     NSString* text = [self number2String:used];
-    [self.debugBtn setTitle:[NSString stringWithFormat:@"Debug(%@)",text] forState:UIControlStateNormal];
+    
+    UIViewController* vc = [[[UIApplication sharedApplication].delegate window] rootViewController];
+    UIViewController* currectViewController = [self getVisibleViewControllerFrom:vc];
+    NSString *currectViewControllerName = NSStringFromClass([currectViewController class]);
+    NSString *debugBtnTitle = [NSString stringWithFormat:@"Debug(%@)  %@",text,currectViewControllerName];
+    float width = [self sizeForString:debugBtnTitle].width+5;
+    self.debugBtn.frame = CGRectMake(self.debugBtn.frame.origin.x, self.debugBtn.frame.origin.y, width, self.debugBtn.frame.size.height);
+    
+    [self.debugBtn setTitle:debugBtnTitle forState:UIControlStateNormal];
+    
 }
-
+- (CGSize)sizeForString:(NSString *)string {
+    CGSize result;
+    UIFont *font = self.debugBtn.titleLabel.font;
+    CGSize size = CGSizeMake(MAXFLOAT, MAXFLOAT);
+    if ([string respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
+        NSMutableDictionary *attr = [NSMutableDictionary new];
+        attr[NSFontAttributeName] = font;
+        CGRect rect = [string boundingRectWithSize:size
+                                         options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                      attributes:attr context:nil];
+        result = rect.size;
+    } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        result = [string sizeWithFont:font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
+#pragma clang diagnostic pop
+    }
+    return result;
+}
 - (NSString* )number2String:(int64_t)n
 {
     if ( n < KB )

@@ -12,10 +12,12 @@
 
 -(void)setName:(NSString *)name{
 
+    name = [NSString stringWithFormat:@"%@",name];
     _name = [name stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];;
 }
 -(void)setValue:(NSString *)value{
 
+    value = [NSString stringWithFormat:@"%@",value];
     _value = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     self.height = [self maxHeight:_value];
