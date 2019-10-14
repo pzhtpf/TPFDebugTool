@@ -54,7 +54,9 @@
     self = [super init];
     if (self) {
         self.mainColor = [UIColor redColor];
-        self.debugWin = [[JxbDebugWindow alloc] initWithFrame:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 20)];
+        CGFloat statusBarHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+        statusBarHeight = statusBarHeight==44?40:20;
+        self.debugWin = [[JxbDebugWindow alloc] initWithFrame:CGRectMake(0, statusBarHeight, [UIScreen mainScreen].bounds.size.width, 20)];
     }
     return self;
 }

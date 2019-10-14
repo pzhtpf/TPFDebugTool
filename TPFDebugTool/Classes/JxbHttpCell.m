@@ -47,7 +47,7 @@
 }
 -(void)handlerStatusCode:(int)statusCode{
 
-    if(statusCode>=400 && statusCode<600){
+    if((statusCode>=400 && statusCode<600) || statusCode==0){
     
          lblTitle.textColor = [UIColor redColor];
     }

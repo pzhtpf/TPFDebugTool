@@ -13,7 +13,7 @@
 #import "JxbDebugTool.h"
 #import "YDRequestVC.h"
 
-#define detailTitles   @[@"Request Url",@"Method",@"Header",@"Status Code",@"Mime Type",@"Start Time",@"Total Duration",@"Request Body",@"Response Body"]
+#define detailTitles   @[@"Request Url",@"Method",@"Header",@"Status Code",@"Mime Type",@"Start Time",@"Total Duration",@"Request Body",@"Response Body",@"Error"]
 
 @interface JxbHttpDetailVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)UITableView  *tableView;
@@ -56,13 +56,17 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)reloadNetworkData:(NSNotification *)notification{
-
-    JxbHttpModel *model = [notification object];
-    if(model){
     
-        self.detail = model;
-        [self.tableView reloadData];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        JxbHttpModel *model = [notification object];
+          if(model){
+          
+              self.detail = model;
+              [self.tableView reloadData];
+        }
+    });
+    
+  
 }
 #pragma mark - UITableView Delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -70,7 +74,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 9;
+    if(!self.detail.error)
+        return 9;
+    else
+        return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -135,6 +142,12 @@
             value = @"Empty";
         }
     }
+    else if (indexPath.row == 9) {
+      
+            value = [NSString stringWithFormat:@"%@",self.detail.error];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+      
+      }
     [cell setTitle:[detailTitles objectAtIndex:indexPath.row] value:value];
     return cell;
 }
@@ -146,6 +159,13 @@
         vc.hidesBottomBarWhenPushed = YES;
         vc.content = self.detail.url.absoluteString;
         vc.title = @"接口地址";
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 9) {
+        JxbContentVC* vc = [[JxbContentVC alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        vc.content = [NSString stringWithFormat:@"%@",self.detail.error];;
+        vc.title = @"网络错误";
         [self.navigationController pushViewController:vc animated:YES];
     }
     
