@@ -13,7 +13,6 @@
 #import "NSURLRequest+Identify.h"
 #import "NSURLResponse+Data.h"
 #import "NSURLSessionTask+Data.h"
-#import <Aspects/Aspects.h>
 
 @class NSURLSession;
 

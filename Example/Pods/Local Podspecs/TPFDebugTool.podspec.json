@@ -1,6 +1,6 @@
 {
   "name": "TPFDebugTool",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "summary": "TPFDebugTool is a debugging tool to monitor the network, view the log, collect crash log",
   "description": "TPFDebugTool is a debugging tool to monitor the network, view the log, collect crash log",
   "homepage": "https://github.com/pzhtpf/TPFDebugTool",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/pzhtpf/TPFDebugTool.git",
-    "tag": "0.1.8"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "8.0"
@@ -24,10 +24,5 @@
       "TPFDebugTool/Assets/*.{storyboard,xib}"
     ]
   },
-  "prefix_header_file": "TPFDebugTool/Classes/TPFDebugTool.pch",
-  "dependencies": {
-    "Aspects": [
-      "~> 1.4.1"
-    ]
-  }
+  "prefix_header_file": "TPFDebugTool/Classes/TPFDebugTool.pch"
 }
