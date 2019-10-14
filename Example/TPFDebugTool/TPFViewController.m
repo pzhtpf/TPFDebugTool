@@ -18,45 +18,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
+    // Do any additional setup after loading the view, typically from a nib.
+
     [self testNetworkingDebugTool];
 }
--(void)testNetworkingDebugTool{
-    
-    //    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    //    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    
-    AFHTTPSessionManager *manager =[AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
+
+- (void)testNetworkingDebugTool {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.timeoutIntervalForRequest = 15;
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+
     // app版本
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    
+
     NSString *urlString = @"http://api.yaduo.com/atourlife/app/checkUpdate";
     NSDictionary *params = @{
-                             @"appVer":app_Version,
-                             @"channelId":@"20001",
-                             @"platType":@"2"
-                             };
-    
-    
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:urlString parameters:params error:nil];
-    
-    
-    
-    
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        
-        
-        //        NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-        //        NSString *content = [[NSString alloc] initWithData:responseObject encoding:gbkEncoding];
-        //        NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
-        //        NSError *jsonParserError;
-        //        NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonParserError];
-        //        NSLog(@"%@",responseDic);
+            @"appVer": app_Version,
+            @"channelId": @"20001",
+            @"platType": @"2"
+    };
+
+    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:urlString parameters:params error:nil];
+    [request setTimeoutInterval:15];
+
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:^(NSProgress *_Nonnull uploadProgress) {
+    } downloadProgress:^(NSProgress *_Nonnull downloadProgress) {
+    } completionHandler:^(NSURLResponse *_Nonnull response, id _Nullable responseObject, NSError *_Nullable error) {
     }];
+
     [dataTask resume];
 }
 

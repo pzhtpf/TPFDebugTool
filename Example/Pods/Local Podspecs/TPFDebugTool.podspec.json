@@ -1,6 +1,6 @@
 {
   "name": "TPFDebugTool",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "summary": "TPFDebugTool is a debugging tool to monitor the network, view the log, collect crash log",
   "description": "TPFDebugTool is a debugging tool to monitor the network, view the log, collect crash log",
   "homepage": "https://github.com/pzhtpf/TPFDebugTool",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/pzhtpf/TPFDebugTool.git",
-    "tag": "0.1.7"
+    "tag": "0.1.8"
   },
   "platforms": {
     "ios": "8.0"

@@ -15,26 +15,19 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
   - Reveal-SDK (2)
-  - TPFDebugTool (0.1.7):
+  - TPFDebugTool (0.1.8):
     - Aspects (~> 1.4.1)
 
 DEPENDENCIES:
   - AFNetworking
-  - FBSnapshotTestCase
   - Reveal-SDK (~> 2)
   - TPFDebugTool (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Aspects
-    - FBSnapshotTestCase
     - Reveal-SDK
 
 EXTERNAL SOURCES:
@@ -44,10 +37,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Reveal-SDK: 4d36a47c7091843eee525b72219e005b90bbac0b
-  TPFDebugTool: d4fb5168574493ca22100fa2fb61c3c739727ab8
+  TPFDebugTool: 2f6e5bc229dc2791a35af15c50c138fce721cc39
 
-PODFILE CHECKSUM: bc6f299ba5323057641f8ee703beb03664e78e0f
+PODFILE CHECKSUM: a9f907b03952244d6110eba873ea3a243cae3005
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.0

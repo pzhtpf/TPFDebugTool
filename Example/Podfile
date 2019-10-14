@@ -5,9 +5,9 @@ target 'TPFDebugTool_Example' do
   pod 'AFNetworking'
   pod 'Reveal-SDK','~> 2'
 
-  target 'TPFDebugTool_Tests' do
-    inherit! :search_paths
-
-    pod 'FBSnapshotTestCase'
-  end
+#  target 'TPFDebugTool_Tests' do
+#    inherit! :search_paths
+#
+#    pod 'FBSnapshotTestCase'
+#  end
 end
