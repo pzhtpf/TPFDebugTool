@@ -75,7 +75,7 @@
     model.url = self.request.URL;
     model.method = self.request.HTTPMethod;
     model.mineType = self.response.MIMEType;
-    if (self.request.HTTPBody) {
+    if (self.request && self.request.HTTPBody) {
         NSData* data = self.request.HTTPBody;
         if ([[JxbDebugTool shareInstance] isHttpRequestEncrypt]) {
             if ([[JxbDebugTool shareInstance] delegate] && [[JxbDebugTool shareInstance].delegate respondsToSelector:@selector(decryptJson:)]) {

@@ -28,12 +28,12 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
     [[JxbDebugTool shareInstance] enableDebugMode];//启用debug工具
     
     // 添加要监测的域名
-    NSMutableArray *array = [[JxbDebugTool shareInstance].arrOnlyHosts mutableCopy];
-    if(!array){
-        array = [NSMutableArray new];
-    }
-    [array addObject:@"api.yaduo.com"];
-    [JxbDebugTool shareInstance].arrOnlyHosts = array;
+//    NSMutableArray *array = [[JxbDebugTool shareInstance].arrOnlyHosts mutableCopy];
+//    if(!array){
+//        array = [NSMutableArray new];
+//    }
+//    [array addObject:@"api.yaduo.com"];
+//    [JxbDebugTool shareInstance].arrOnlyHosts = array;
     
 #endif
     
