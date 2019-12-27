@@ -41,7 +41,7 @@ pod "TPFDebugTool"
 
 ## Author
 
-pzhtpf, pftian@yaduo.com
+RocTian, 389744841@qq.com
 
 ## License
 
