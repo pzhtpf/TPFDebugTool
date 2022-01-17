@@ -30,7 +30,14 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight  [UIScreen mainScreen].bounds.size.height
 
-#define kIsIphoneXScreen kScreenHeight==812
+#define kIsIphoneXScreen ({\
+BOOL isBangsScreen = NO; \
+if (@available(iOS 11.0, *)) { \
+UIWindow *window = [[UIApplication sharedApplication].windows firstObject]; \
+isBangsScreen = window.safeAreaInsets.bottom > 0; \
+} \
+isBangsScreen; \
+})
 
 #define kStatusBarHeight (kIsIphoneXScreen?44:20)
 #define kNavBarHeight 44

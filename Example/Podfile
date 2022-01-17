@@ -1,13 +1,15 @@
 use_frameworks!
 
 target 'TPFDebugTool_Example' do
+  
   pod 'TPFDebugTool', :path => '../'
   pod 'AFNetworking'
-  pod 'Reveal-SDK','~> 2'
+  pod 'Reveal-SDK','24'
 
-#  target 'TPFDebugTool_Tests' do
-#    inherit! :search_paths
-#
-#    pod 'FBSnapshotTestCase'
-#  end
+  post_install do |installer|
+       installer.pods_project.build_configurations.each do |config|
+         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+       end
+  end
+  
 end

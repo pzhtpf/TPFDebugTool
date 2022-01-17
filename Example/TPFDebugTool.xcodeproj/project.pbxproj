@@ -294,7 +294,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TPFDebugTool_Example/Pods-TPFDebugTool_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-2/iOS/RevealServer.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/TPFDebugTool/TPFDebugTool.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -463,6 +463,7 @@
 			baseConfigurationReference = 1FCA0A56DB435C395C6E71A8 /* Pods-TPFDebugTool_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TPFDebugTool/TPFDebugTool-Prefix.pch";
 				INFOPLIST_FILE = "TPFDebugTool/TPFDebugTool-Info.plist";

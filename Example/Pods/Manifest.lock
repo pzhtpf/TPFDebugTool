@@ -14,17 +14,18 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Reveal-SDK (2)
-  - TPFDebugTool (0.2.0)
+  - Reveal-SDK (24)
+  - TPFDebugTool (0.2.3)
 
 DEPENDENCIES:
   - AFNetworking
-  - Reveal-SDK (~> 2)
+  - Reveal-SDK (= 24)
   - TPFDebugTool (from `../`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+  trunk:
     - Reveal-SDK
 
 EXTERNAL SOURCES:
@@ -33,9 +34,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Reveal-SDK: 4d36a47c7091843eee525b72219e005b90bbac0b
-  TPFDebugTool: 1490e8013c740d35dd3c46fd88a8ebd15df54807
+  Reveal-SDK: 5d7e56b8f018c0a88b3a2c10bf68d598bbd3b071
+  TPFDebugTool: ed0369b4b7abd3e9d6f0c7b8018513da08db991f
 
-PODFILE CHECKSUM: a9f907b03952244d6110eba873ea3a243cae3005
+PODFILE CHECKSUM: 6a4f393dbc3d2a902f658616e3e87bc38db23f12
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.11.2
